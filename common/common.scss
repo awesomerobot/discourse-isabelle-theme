@@ -285,6 +285,11 @@ input[type="color"] {
   }
 }
 
+.user-card,
+.group-card {
+  box-shadow: 0 4px 0 0 $wet_sand;
+}
+
 .user-card .badge-section .user-badge,
 .user-card .badge-section .more-user-badges a {
   border: none;
