@@ -1,0 +1,87 @@
+.group-nav .select-kit.combo-box .select-kit-header,
+.list-controls .combo-box .combo-box-header {
+  padding: 0.6em 1em;
+  @include border-radius-large;
+  background: $water;
+  border-color: $water;
+  color: $secondary;
+  margin-right: 0.25em;
+  &[aria-expanded="true"] {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.select-kit.is-expanded .select-kit-body {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 0 1px $mud;
+}
+
+.select-kit.single-select .select-kit-filter.is-expanded {
+  border-color: $mud;
+}
+
+.select-kit .select-kit-row.is-selected.is-highlighted,
+.select-kit .select-kit-row.is-highlighted {
+  background: $light_gold;
+}
+
+.select-kit .select-kit-header {
+  transition: top 0.25s;
+}
+
+.list-controls {
+  .select-kit .select-kit-header .selected-name .name {
+    .d-icon {
+      margin-left: 0;
+      color: $secondary;
+      margin-right: 0.25em;
+    }
+    .category-name {
+      color: $secondary;
+    }
+  }
+}
+
+.select-kit .select-kit-row.is-selected {
+  background: $sand;
+  &:hover {
+    background: $sand;
+  }
+}
+
+.select-kit.dropdown-select-box.toolbar-popup-menu-options {
+  .select-kit-body {
+    background: $sand;
+  }
+  .select-kit-collection {
+    background: transparent;
+  }
+}
+
+.select-kit.dropdown-select-box.toolbar-popup-menu-options .select-kit-row {
+  background: $secondary;
+  @include border-radius-small;
+  &:hover,
+  &.is-highlighted {
+    background: $sky;
+  }
+}
+
+.select-kit.dropdown-select-box .select-kit-body {
+  border: none;
+}
+.select-kit.dropdown-select-box.is-expanded .select-kit-collection,
+.select-kit.dropdown-select-box.is-expanded .select-kit-body,
+.select-kit .select-kit-body {
+  @include border-radius-small;
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header {
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 10px;
+  padding-left: 0.5em;
+  &:hover {
+    top: 0;
+  }
+}

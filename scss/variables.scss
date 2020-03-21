@@ -1,0 +1,20 @@
+@mixin border-radius-small {
+  border-radius: 10px;
+}
+
+@mixin border-radius-large {
+  border-radius: 20px;
+}
+
+$mud: #ccc1a7;
+$sand: #f1e9d5;
+$wet_sand: #eae5cd;
+
+$sky: #68c6b9;
+$water: #00a791;
+
+$night: #015562;
+$dark_night: #00333d;
+
+$gold: #fcca46;
+$light_gold: #fdde89;

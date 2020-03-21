@@ -1,0 +1,474 @@
+@import "common/components/buttons";
+
+@import "variables";
+@import "header";
+@import "topic-list";
+@import "composer";
+@import "topic";
+@import "categories";
+@import "select-kit";
+
+// global
+.alert.alert-info {
+  background: $sand;
+  border-radius: 15px;
+}
+
+.alert .close {
+  top: 6px;
+  right: 10px;
+}
+
+.select-kit.combo-box .select-kit-header,
+.user-preferences .bio-composer,
+.group-form-bio,
+.user-preferences .warning,
+.select-kit.multi-select .multi-select-header,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  @include border-radius-small;
+}
+
+.user-preferences .bio-composer .d-editor-preview,
+.group-form-bio .d-editor-preview,
+.edit-category-tab-topic-template .d-editor-preview {
+  background: $sand;
+  @include border-radius-small;
+  padding: 0.25em 0.5em;
+}
+
+// buttons
+.admin-controls button,
+.admin-controls label.btn,
+.timeline-container.timeline-fullscreen
+  .topic-timeline
+  .timeline-footer-controls
+  button,
+.group-members-manage .btn,
+.btn-default,
+#show-tag-info,
+.user-badges .btn,
+.signup-cta.alert.alert-info .btn:not(.btn-primary) {
+  @include btn(
+    $text-color: $secondary,
+    $bg-color: $night,
+    $icon-color: $secondary,
+    $hover-bg-color: darken($night, 5%),
+    $hover-icon-color: $secondary
+  );
+  transition: top 0.25s;
+
+  &:active {
+    box-shadow: none !important;
+    position: relative;
+    top: 3px;
+  }
+  padding: 0.75em 1em;
+  border-radius: 25px/19px;
+  box-shadow: 0 4px 0 0 $dark_night;
+}
+
+.btn-primary {
+  @include btn(
+    $text-color: $secondary,
+    $bg-color: $love,
+    $icon-color: $secondary,
+    $hover-bg-color: darken($love, 15%),
+    $hover-icon-color: $secondary
+  );
+  transition: top 0.25s;
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px;
+  }
+  padding: 0.75em 1em;
+  border-radius: 25px/19px;
+  box-shadow: 0 4px 0 0 darken($love, 25%);
+}
+
+.btn-danger {
+  padding: 0.75em 1em;
+  border-radius: 25px/19px;
+  box-shadow: 0 4px 0 0 darken($love, 25%);
+  transition: top 0.25s;
+
+  .discourse-no-touch & {
+    &:hover {
+      box-shadow: none;
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
+.timeline-container.timeline-fullscreen
+  .topic-timeline
+  .timeline-footer-controls
+  button {
+  margin-right: 0.25em;
+}
+
+#show-tag-info {
+  font-size: 1.05em;
+}
+
+// list controls
+
+.admin-main-nav,
+.admin-controls,
+.user-primary-navigation,
+.list-controls {
+  background: $sky;
+  border-radius: 20px 20px 0 0;
+  padding: 1em 1em 0.5em 1em;
+  .select-kit.combo-box .combo-box-header > .d-icon {
+    color: $secondary;
+  }
+  margin-bottom: 0;
+}
+
+.admin-controls {
+  padding: 1em 0;
+
+  nav,
+  .nav-pills {
+    padding: 0 0.5em;
+    background: transparent;
+    > li a.active {
+      background: $water;
+    }
+  }
+  nav::before {
+    background: linear-gradient(to right, $sky 0%, rgba(213, 222, 214, 0) 100%);
+  }
+  nav::after {
+    background: linear-gradient(to left, $sky 0%, rgba(213, 222, 214, 0) 100%);
+  }
+}
+
+.nav-pills > li > a .d-icon {
+  opacity: 1;
+  color: $water;
+}
+.nav-pills > li a.active,
+.nav-pills > li a.active:hover {
+  .d-icon {
+    color: $gold;
+  }
+}
+.nav-pills > li > a:hover .d-icon {
+  opacity: 1;
+  color: $secondary;
+}
+
+.navigation-container {
+  .btn {
+    font-size: 1.05em;
+  }
+  .btn-icon {
+    font-size: 1.1em;
+  }
+}
+
+.nav-pills > li > a {
+  padding: calc(0.65em + 1px) 1em; // account for border
+  @include border-radius-large;
+  color: $secondary;
+  margin-right: 0.25em;
+  &:hover {
+    background: $water;
+    color: $secondary;
+  }
+  &.active {
+    color: $gold;
+  }
+}
+
+.discourse-no-touch a.lightbox {
+  &:hover {
+    box-shadow: 0 4px 0 1px $mud;
+  }
+  &.active {
+    box-shadow: 0;
+    top: 0;
+    position: relative;
+  }
+}
+
+// modals
+
+.bootbox.modal,
+.modal-inner-container {
+  @include border-radius-large;
+}
+
+.modal-header {
+  background: $sky;
+  color: $secondary;
+  border-radius: 20px 20px 0 0;
+  .btn-flat.close {
+    margin-top: 5px;
+    .d-icon {
+      color: $secondary;
+    }
+  }
+}
+.modal .nav li > a {
+  background: $sky;
+  &.active {
+    background: $water;
+  }
+}
+
+.modal-footer {
+  border: none;
+}
+
+.colorpicker-wrapper {
+  .add-on {
+    border-radius: 10px 0 0 10px;
+    + input {
+      border-radius: 0 10px 10px 0 !important;
+    }
+  }
+}
+
+// misc
+
+.top-lists {
+  background: $sand;
+}
+
+.user-stream .notification.unread {
+  background: $sand;
+}
+
+.directory .user {
+  border-color: $mud;
+}
+
+.directory .me {
+  background: $light_gold;
+}
+
+.group-box-inner,
+.badge-card {
+  border: none;
+  background: $sand;
+  border-radius: 2%/4%;
+
+  &.medium {
+    margin-right: 0.65% !important;
+    margin-left: 0.65% !important;
+    &:hover {
+      box-shadow: 0 4px 0 0 $wet_sand;
+    }
+  }
+}
+
+.user-card .badge-section .user-badge,
+.user-card .badge-section .more-user-badges a {
+  border: none;
+  background: $sand;
+  @include border-radius-small;
+}
+
+.group-box-inner,
+.groups-boxes .group-box {
+  border: none;
+  @include border-radius-small;
+}
+
+.group-details-container {
+  background: none;
+}
+
+.discourse-no-touch .groups-boxes .group-box:hover {
+  box-shadow: 0 4px 0 0 $wet_sand;
+}
+
+.directory table {
+  @include border-radius-large;
+  overflow: hidden;
+  border-top: none;
+  box-shadow: 0 5px 0 0 $mud;
+  border: none;
+  background: $sand;
+
+  tbody {
+    border-top: none;
+  }
+  thead {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    border: none;
+  }
+
+  th:first-of-type {
+    padding-left: 1.5em;
+  }
+
+  td,
+  th,
+  tr {
+    border: none;
+  }
+}
+
+.groups-header-filters-type {
+  .select-kit-selected-name {
+    padding: 0.55em 0.2em;
+  }
+}
+
+.group-members {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.messages-nav {
+  margin-top: 1em;
+}
+.user-content-wrapper .user-additional-controls,
+.user-content {
+  padding: 1em;
+}
+
+.user-content-wrapper .user-secondary-navigation {
+  padding-left: 1em;
+}
+
+.user-content-wrapper .user-additional-controls + .user-content,
+.user-content-wrapper .user-secondary-navigation + .user-content {
+  padding-right: 1em;
+}
+.user-content.user-badges-list {
+  margin-bottom: 0;
+}
+
+.user-content-wrapper {
+  border: 2px solid $mud;
+  border-top: none;
+
+  @include border-radius-large;
+  box-shadow: 0 5px 0 0 $mud;
+  border-top: none;
+  background: $secondary;
+}
+
+.user-main .staff-counters {
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+.user-main .about .details {
+  padding: 1em 1em 0.5em;
+  margin-bottom: 2em;
+
+  border: 2px solid $mud;
+  border-top: none;
+  box-shadow: 0 5px 0 0 $mud;
+  @include border-radius-small;
+  .staff & {
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.user-main .about.collapsed-info .details {
+  border: none;
+  box-shadow: none;
+}
+
+.top-title-buttons {
+  display: block;
+  margin-top: 0.5em;
+}
+
+.reviewable {
+  .nav-pills > li > a {
+    background: $sky;
+    &.active {
+      background: $water;
+    }
+  }
+}
+
+.reviewable .reviewable-container .reviewable-list + .reviewable-filters {
+  background: $sand;
+  div.ac-wrap,
+  .d-date-time-input-range .d-date-input {
+    @include border-radius-small;
+  }
+  .d-date-time-input {
+    border: none;
+  }
+  .d-date-time-input-range .panels .btn {
+    background: $mud;
+    @include border-radius-small;
+  }
+  .d-date-time-input-range .panels.to .to-panel,
+  .d-date-time-input-range .panels.from .from-panel {
+    background: $love;
+  }
+}
+
+.tag-sort-options {
+  margin-top: 1em;
+}
+
+.tags-list {
+  border-color: $wet_sand;
+}
+
+.tags-page,
+.tag-page {
+  hr {
+    border-color: $wet_sand;
+  }
+}
+
+.admin-main-nav {
+  box-sizing: border-box;
+}
+
+.admin-controls .controls {
+  background: transparent;
+}
+
+.admin-content {
+  padding: 1em;
+  border: 1px solid $primary-low;
+}
+
+.admin-customize .themes-list-header {
+  border: none;
+  border-bottom: 1px solid $primary-low;
+  padding-bottom: 1em;
+}
+.admin-customize .themes-list-header .tab,
+.admin-customize .themes-list-header .tab {
+  @include border-radius-large;
+}
+
+.login-modal .login-modal #login-buttons:not(.hidden) button:last-of-type,
+.create-account .login-modal #login-buttons:not(.hidden) button:last-of-type {
+  @include border-radius-small;
+}
+
+.signup-cta.alert.alert-info a {
+  margin-top: 0.65em;
+}

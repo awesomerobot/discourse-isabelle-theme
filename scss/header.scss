@@ -1,0 +1,244 @@
+.d-header {
+  border-radius: 0 0 37px 37px;
+  box-shadow: none;
+  padding: 0.5em 0;
+  .d-icon {
+    color: $header_primary;
+  }
+  .icon {
+    padding: 0.5em;
+    border-radius: 40px;
+    margin-left: 0.5em;
+    .d-icon {
+    }
+  }
+}
+
+.d-header-icons .icon:hover,
+.d-header-icons .icon:focus,
+.drop-down-mode .d-header-icons .active .icon {
+  border-radius: 100px;
+  background: $water;
+  border-color: transparent;
+  .d-icon {
+    color: $gold;
+  }
+  &:after {
+    border-top-color: transparent;
+  }
+}
+
+.menu-panel {
+  background: $header_background;
+  border-color: transparent;
+  box-shadow: none;
+  border-top-color: $water;
+  margin-top: 0.75em;
+}
+
+div.menu-links-header .menu-links-row {
+  border-color: $water;
+  li a.active {
+    .d-icon {
+      color: $gold;
+    }
+    &:focus,
+    &:hover {
+      background: #059a7f;
+      border-radius: 10px 10px 0 0;
+      border-color: transparent;
+      color: $gold;
+    }
+  }
+}
+
+.menu-panel .menu-links-header li a.widget-link:hover,
+.menu-panel .menu-links-header li a.widget-link:focus,
+.menu-panel .menu-links-header li.heading a.widget-link:hover,
+.menu-panel .menu-links-header li.heading a.widget-link:focus {
+  background: $water;
+  border-radius: 10px 10px 0 0;
+  border-color: transparent;
+}
+
+div.menu-links-header {
+  display: block;
+}
+
+div.menu-links-header .fa,
+div.menu-links-header a {
+  color: $secondary;
+  &.active {
+    background: $water;
+    border-radius: 10px 10px 0 0;
+    border-color: transparent;
+  }
+}
+
+div.menu-links-header .menu-links-row {
+  padding: 0;
+}
+div.menu-links-header .menu-links-row li a.active::after {
+  border-top: 1px solid $water;
+}
+
+div.menu-links-header .menu-links-row li a.active {
+  border-color: transparent;
+}
+
+.user-menu .quick-access-panel .show-all {
+  a {
+    border-radius: 0 0 10px 10px;
+  }
+  a:hover {
+    background: $light_gold;
+  }
+}
+
+.user-menu .quick-access-panel li:not(.show-all) {
+  padding: 0.5em;
+}
+
+.user-menu .quick-access-panel li {
+  background: $sand;
+}
+
+.user-menu .quick-access-panel li:hover,
+.user-menu .quick-access-panel li:focus {
+  background: $light_gold;
+}
+
+.user-menu .quick-access-panel .d-icon,
+.user-menu .quick-access-panel:hover .d-icon {
+}
+
+.dismiss-link a {
+  color: $secondary;
+  .d-icon {
+    color: $secondary;
+  }
+}
+
+.user-menu .menu-panel hr {
+  display: none;
+}
+.menu-panel li a.widget-link {
+  &.dismiss {
+    @include border-radius-small;
+    margin-top: 0.5em;
+    &:hover {
+      background: $water;
+    }
+  }
+}
+
+.menu-panel .d-icon {
+  color: $primary-medium;
+}
+
+.menu-panel.drop-down {
+  border-radius: 0 0 20px 20px;
+}
+
+.menu-panel ul {
+  li:last-of-type {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.search-menu .menu-panel:not(.slide-in) .panel-body {
+  height: auto !important;
+}
+
+.menu-panel.slide-in {
+  padding-bottom: 1.5em;
+  @include border-radius-large;
+  .panel-body-contents {
+    border-radius: 15px;
+    margin-top: 0.25em;
+  }
+}
+
+.search-menu,
+.hamburger-panel {
+  .panel-body-contents {
+    background: $secondary;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    padding: 0.5em;
+    .widget-link {
+      @include border-radius-small;
+    }
+  }
+}
+
+.search-container .search-advanced .search-info {
+  border-color: #eae5ca;
+}
+
+.search-container .search-advanced-sidebar .search-advanced-title {
+  background: $sky;
+  border-radius: 10px 10px 0 0;
+}
+
+.search-container .search-advanced-sidebar .search-advanced-filters {
+  background: $sand;
+}
+
+.search-container {
+  .select-kit.multi-select {
+    @include border-radius-small;
+  }
+  div.ac-wrap {
+    @include border-radius-small;
+  }
+
+  #search-post-date {
+    margin-top: 0.25em;
+  }
+}
+
+.fps-result a.search-link .topic-title {
+  color: $primary-high !important;
+}
+
+.menu-panel hr {
+  border-color: #eae5ca;
+}
+
+.menu-panel li a.widget-link:hover,
+.menu-panel li a.widget-link:focus,
+.menu-panel li.heading a.widget-link:hover,
+.menu-panel li.heading a.widget-link:focus {
+  background: $light_gold;
+}
+
+.search-menu .search-context .show-help {
+  margin-right: 0.5em;
+}
+
+.search-menu {
+  .menu-panel li a.widget-link,
+  .menu-panel li.heading a.widget-link {
+    padding: 0.5em;
+  }
+}
+
+.extra-info-wrapper .topic-statuses .d-icon,
+.extra-info-wrapper .badge-wrapper.bullet span.badge-category,
+.extra-info-wrapper .badge-wrapper.bar span.badge-category,
+.extra-info-wrapper .badge-wrapper.none span.badge-category {
+  color: $header_primary;
+}
+
+.topic-header-extra {
+  .discourse-tag.simple,
+  .discourse-tag.simple:visited,
+  .discourse-tag.simple:hover {
+    color: $secondary;
+  }
+}
+
+.extra-info-wrapper .discourse-tag {
+  color: $header_primary !important;
+}

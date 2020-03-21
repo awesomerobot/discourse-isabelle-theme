@@ -1,0 +1,24 @@
+{
+  "name": "discourse-isabelle-theme",
+  "about_url": null,
+  "license_url": null,
+  "assets": {},
+  "color_schemes": {
+    "isabelle": {
+      "primary": "00333d",
+      "primary-high": "1d4249",
+      "primary-medium": "6e8387",
+      "primary-low-mid": "9da5a2",
+      "primary-low": "d5ded6",
+      "secondary": "FAF7E9",
+      "tertiary": "00a791",
+      "quaternary": "00a791",
+      "header_background": "68C6B9",
+      "header_primary": "FAF7E9",
+      "highlight": "ffff4d",
+      "danger": "e74762",
+      "success": "00a791",
+      "love": "e74762"
+    }
+  }
+}

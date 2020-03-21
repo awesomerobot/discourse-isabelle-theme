@@ -1,0 +1,359 @@
+.topic-map,
+.post-notice {
+  background: $sand;
+  border-color: $wet_sand;
+}
+.topic-map {
+  @include border-radius-small;
+  overflow: hidden;
+  border-color: $wet_sand;
+  section {
+    border-color: $wet_sand;
+  }
+}
+
+.post-notice {
+  border-radius: 10px 10px 0 0;
+}
+.embedded-posts,
+.embedded-posts.bottom .row .topic-avatar,
+.embedded-posts.bottom .row .topic-body {
+  border-color: $wet_sand;
+}
+
+.topic-map .buttons .btn {
+  border-color: $wet_sand;
+  border-top: none;
+  &:hover {
+    background: $mud;
+    .d-icon {
+      color: $secondary;
+    }
+  }
+}
+
+.small-action,
+.topic-body,
+.small-action .small-action-desc,
+.gap {
+  border-color: $wet_sand;
+}
+
+.small-action .topic-avatar .d-icon {
+  color: $primary-high;
+  font-size: 1.7em;
+  padding-top: 0.1em;
+}
+
+.topic-body,
+.topic-avatar {
+  border-color: $wet_sand;
+}
+
+.topic-status-info {
+  border-color: $wet_sand;
+}
+
+.timeline-container .topic-timeline {
+  padding-top: 1.5em;
+  .timeline-scrollarea {
+    border-color: $mud;
+  }
+  .timeline-handle {
+    background: $gold;
+  }
+
+  .start-date,
+  .now-date,
+  .timeline-ago {
+    color: $primary-high;
+  }
+}
+
+.timeline-container .topic-timeline .timeline-footer-controls {
+  margin-top: 0;
+}
+
+.timeline-scrollarea-wrapper {
+  padding-bottom: 2em;
+}
+
+nav.post-controls button.create {
+  color: $sky;
+
+  .d-icon {
+    color: $sky;
+  }
+}
+
+.discourse-no-touch .topic-body .actions .fade-out {
+  opacity: 1;
+}
+.small-action,
+nav.post-controls {
+  button {
+    @include border-radius-small;
+    @include border-radius-large;
+    color: $sky;
+    transition: top 0.25s;
+    .d-icon {
+      color: $sky;
+    }
+    .discourse-no-touch & {
+      &:hover {
+        background: $night;
+        box-shadow: 0 4px 0 0 $dark_night;
+        position: relative;
+        top: -3px;
+        color: $secondary;
+        .d-icon {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  button.bookmark.bookmarked .d-icon {
+    color: $love;
+  }
+
+  .double-button {
+    overflow: hidden;
+    @include border-radius-small;
+    @include border-radius-large;
+    .discourse-no-touch & {
+      &:hover {
+        .btn-flat {
+          top: 0 !important;
+          background: $night;
+          color: $secondary;
+
+          .d-icon {
+            color: $secondary;
+          }
+          &:hover,
+          &.d-hover {
+            background: transparent;
+          }
+          &.has-like {
+            .d-icon {
+              color: $love !important;
+            }
+          }
+        }
+        background: $night;
+        box-shadow: 0 4px 0 0 $dark_night;
+        position: relative;
+        top: -3px;
+        color: $secondary;
+        .d-icon {
+          color: $secondary;
+        }
+      }
+    }
+    .btn-flat {
+      border-radius: 0;
+    }
+  }
+}
+
+#share-link {
+  @include border-radius-small;
+}
+.user-card.show,
+.group-card.show {
+  @include border-radius-large;
+}
+
+.user-card .card-content,
+.group-card .card-content {
+  background: transparent;
+}
+
+.suggested-topics {
+  table {
+    margin: 0;
+    tr:last-of-type {
+      border-bottom: none;
+    }
+  }
+  .topics {
+    @include border-radius-small;
+    overflow: hidden;
+    padding-bottom: 0;
+    border: 1px solid $wet_sand;
+  }
+}
+
+.paginated-topics-list {
+  .topic-list {
+    @include border-radius-small;
+    overflow: hidden;
+  }
+  tbody {
+    border: 1px solid $wet_sand;
+  }
+  .topic-list-item td:first-child {
+    border-left: 1px solid $wet_sand;
+  }
+}
+
+.user-stream .item,
+.user-stream .user-stream-item {
+  border-color: $wet_sand;
+}
+
+.suggested-topics-message {
+  font-weight: normal;
+  margin-top: 1em;
+}
+
+.embedded-posts .collapse-down,
+.embedded-posts .collapse-up {
+  border-color: $wet_sand;
+  @include border-radius-large;
+  .d-icon {
+    color: $sky;
+  }
+  .discourse-no-touch & {
+    &:hover {
+      background: $night;
+      border-color: #013f49;
+      box-shadow: 0 4px 0 -1px $dark_night;
+      .d-icon {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.embedded-posts .arrow,
+.read-state {
+  color: $sky;
+}
+
+.posts-wrapper {
+  border: 2px solid $mud;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 0 0 $mud;
+  border-top: none;
+  background: $secondary;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#topic-title {
+  margin-bottom: 0;
+}
+
+.topic-post:first-of-type {
+  .topic-avatar,
+  .topic-body {
+    border-top: none;
+  }
+}
+
+#topic-title h1 a {
+  color: $secondary;
+}
+
+.title-wrapper .topic-statuses .d-icon {
+  color: $secondary;
+}
+
+#topic-title .title-wrapper {
+  padding: 1em;
+  color: $secondary;
+  background: $sky;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+  .topic-category > .badge-wrapper.bullet span.badge-category {
+    color: $secondary;
+  }
+}
+
+#topic-footer-buttons .bookmark.bookmarked .d-icon-bookmark {
+  color: $love;
+}
+
+.tap-tile-grid .tap-tile {
+  &:hover {
+    background: $light_gold;
+  }
+  &.active {
+    background: $gold;
+  }
+}
+
+#topic-progress {
+  color: $primary-high;
+  border-radius: 10px 10px 0 0;
+  border-color: $mud;
+  box-shadow: 0 4px 0 0 $mud;
+
+  .bg {
+    background: $light_gold;
+    border-right-color: $light_gold;
+    border-radius: 10px 10px 0 0;
+
+    .staff & {
+      border-radius: 0 10px 0 0;
+    }
+    .docked & {
+      @include border-radius-small;
+    }
+  }
+  .staff & {
+    border-radius: 0 10px 0 0;
+  }
+  .docked & {
+    @include border-radius-small;
+  }
+}
+
+#topic-progress-wrapper .btn {
+  padding: 4px 12px;
+  border-radius: 10px 0 0 0;
+  .docked & {
+    @include border-radius-small;
+  }
+}
+
+@keyframes background-fade-highlight {
+  0% {
+    background-color: $light_gold;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.discourse-local-dates-create-modal
+  .form
+  .date-time-configuration
+  .date-time-control
+  .date-time {
+  background: transparent !important;
+}
+p > code,
+li > code,
+pre > code,
+#share-link {
+  background: $sand;
+  box-shadow: none;
+}
+
+nav.post-controls .post-admin-menu,
+.topic-admin-popup-menu {
+  background: $sky;
+  border: none;
+  box-shadow: none;
+  @include border-radius-small;
+}
+nav.post-controls .post-admin-menu h3,
+.popup-menu h3 {
+  text-align: center;
+  color: $secondary;
+}

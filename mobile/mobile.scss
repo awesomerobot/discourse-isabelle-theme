@@ -1,0 +1,160 @@
+@import "variables";
+
+.d-header {
+  font-size: $font-down-1;
+  border-radius: 0 0 15px 15px;
+}
+
+.panel-body {
+  font-size: $font-up-1;
+}
+
+.alert.alert-info {
+  margin: 10px 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.list-controls {
+  margin: 10px 0 0;
+}
+
+.topic-list td {
+  padding: 0.75em 0.5em;
+}
+
+.topic-list-bottom {
+  margin: 10px 0;
+}
+
+.navigation-toggle {
+  border: none !important;
+  @include border-radius-large;
+  background: $water;
+}
+
+.nav-pills > li > a .d-icon {
+  color: $secondary;
+}
+
+.list-controls .nav-pills .drop {
+  box-shadow: 0 5px 0 0 $mud;
+  @include border-radius-large;
+  border-color: $mud;
+}
+
+tr.category-topic-link {
+  border-color: $mud;
+  margin: 0;
+}
+
+.category-list-item {
+  margin: 0;
+  border-top: 1px solid $mud !important;
+  border-bottom: none !important;
+
+  &:last-of-type {
+    border-bottom: 1px solid $mud !important;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.category-list {
+}
+
+.category-list-item > footer,
+.subcategory-list-item > footer {
+  border-color: $mud;
+}
+
+#reply-control {
+  border: none;
+  box-shadow: none;
+}
+
+#reply-control .submit-panel .save-or-cancel .cancel {
+  color: $danger;
+}
+
+.modal-footer {
+  border-top: 1px solid $mud;
+}
+.search-advanced-title {
+  border-radius: 10px !important;
+}
+.search-container .search-advanced-sidebar .search-advanced-title.btn {
+  background: $sky;
+  color: $secondary;
+}
+
+.user-content-wrapper .user-primary-navigation {
+  background: transparent;
+  padding: 0;
+}
+
+.user-content-wrapper {
+  border-top: 1px solid $mud;
+}
+
+.mobile-nav {
+  margin: 1em 1em 0;
+  border-radius: 15px;
+  border-color: $mud;
+}
+
+.user-content {
+  padding-top: 0;
+  @include border-radius-large;
+}
+
+.user-stream .item,
+.user-stream .user-stream-item {
+  padding: 1em 0.5em;
+}
+
+#reply-control .d-editor-preview img:not(.thumbnail),
+.cooked img:not(.thumbnail) {
+  max-width: 100% !important;
+}
+
+#topic-title {
+  padding-bottom: 0;
+}
+
+.topic-post:first-of-type article {
+  border-top: none;
+}
+
+.topic-post article {
+  border-top: none;
+  border-top: 1px solid $mud;
+}
+
+.admin-main-nav,
+.admin-controls,
+.user-primary-navigation,
+.list-controls {
+  padding-top: 0.75em;
+  padding-bottom: 0.25em;
+}
+
+.tags-admin-dropdown {
+  margin-right: 1em;
+}
+
+#show-tag-info {
+  margin-bottom: 10px;
+}
+
+.groups-header-filters {
+  margin-top: 1em;
+}
+
+.user-content-wrapper {
+  box-sizing: border-box;
+}
+
+.user-content {
+  box-sizing: border-box;
+}

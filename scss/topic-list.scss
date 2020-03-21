@@ -1,0 +1,27 @@
+tbody {
+  border: none;
+}
+
+thead {
+  background: $sand;
+}
+
+tr {
+  border-color: $wet_sand;
+}
+
+.list-container {
+  border-top: none;
+}
+
+#list-area {
+  border: 2px solid $mud;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 0 0 $mud;
+  border-top: none;
+  background: $secondary;
+}
+
+.footer-message {
+  padding: 0 0.75em;
+}
