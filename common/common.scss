@@ -66,7 +66,9 @@ input[type="color"] {
 .btn-default,
 #show-tag-info,
 .user-badges .btn,
-.signup-cta.alert.alert-info .btn:not(.btn-primary) {
+.signup-cta.alert.alert-info .btn:not(.btn-primary),
+.widget-button.btn.popup-menu-button.toggle-admin-menu.keyboard-target-admin-menu.no-text.btn-icon,
+.widget-button.btn.popup-menu-button.toggle-admin-menu.no-text.btn-icon {
   @include btn(
     $text-color: $secondary,
     $bg-color: $night,
@@ -118,6 +120,60 @@ input[type="color"] {
       top: 3px;
     }
   }
+}
+
+.popup-menu {
+  box-shadow: 0 4px 0 1px $mud !important;
+  border: 1px solid $mud !important;
+
+  ul li {
+    border: none;
+  }
+  .widget-button {
+    background: $sand;
+    box-shadow: none;
+    border-radius: 0;
+    .d-button-label {
+      color: $primary;
+    }
+    &:hover {
+      background: darken($night, 5%);
+      .d-button-label {
+        color: $secondary;
+      }
+      .d-icon {
+        color: $secondary;
+      }
+    }
+  }
+  .btn.popup-menu-btn-danger:hover {
+    background: $danger;
+    .d-button-label {
+      color: $secondary;
+    }
+    .d-icon {
+      color: $secondary;
+    }
+  }
+  li:first-of-type {
+    .widget-button {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  li:last-of-type {
+    .widget-button {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
+
+.options .select-kit-body {
+  box-shadow: 0 4px 0 1px $mud !important;
+  border: 1px solid $mud !important;
+}
+
+.select-kit.dropdown-select-box.toolbar-popup-menu-options .select-kit-row {
+  border-radius: 0;
 }
 
 .timeline-container.timeline-fullscreen
