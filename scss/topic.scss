@@ -232,7 +232,7 @@ nav.post-controls {
   color: $sky;
 }
 
-.posts-wrapper {
+.container.posts {
   border: 2px solid $mud;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 5px 0 0 $mud;
@@ -274,8 +274,11 @@ nav.post-controls {
   }
 }
 
-#topic-footer-buttons .bookmark.bookmarked .d-icon-bookmark {
-  color: $love;
+#topic-footer-buttons {
+  margin-top: 2em;
+  .bookmark.bookmarked .d-icon-bookmark {
+    color: $love;
+  }
 }
 
 .tap-tile-grid .tap-tile {

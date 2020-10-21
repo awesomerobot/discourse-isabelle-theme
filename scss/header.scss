@@ -9,8 +9,6 @@
     padding: 0.5em;
     border-radius: 40px;
     margin-left: 0.5em;
-    .d-icon {
-    }
   }
 }
 
@@ -32,7 +30,7 @@
   background: $header_background;
   border-color: transparent;
   box-shadow: none;
-  border-top-color: $water;
+  border-top-color: transparent;
   margin-top: 0.75em;
 }
 
@@ -59,6 +57,9 @@ div.menu-links-header .menu-links-row {
   background: $water;
   border-radius: 10px 10px 0 0;
   border-color: transparent;
+  .d-icon {
+    color: var(--secondary);
+  }
 }
 
 div.menu-links-header {
@@ -69,7 +70,7 @@ div.menu-links-header .fa,
 div.menu-links-header a {
   color: $secondary;
   &.active {
-    background: $water;
+    background: var(--secondary);
     border-radius: 10px 10px 0 0;
     border-color: transparent;
   }
@@ -84,6 +85,11 @@ div.menu-links-header .menu-links-row li a.active::after {
 
 div.menu-links-header .menu-links-row li a.active {
   border-color: transparent;
+}
+
+.user-menu .quick-access-panel {
+  border-top-color: transparent;
+  padding-top: 0;
 }
 
 .user-menu .quick-access-panel .show-all {
@@ -164,7 +170,7 @@ div.menu-links-header .menu-links-row li a.active {
   .panel-body-contents {
     background: $secondary;
     border-radius: 0 0 10px 10px;
-    overflow: hidden;
+    overflow: auto;
     padding: 0.5em;
     .widget-link {
       @include border-radius-small;
@@ -245,4 +251,25 @@ div.menu-links-header .menu-links-row li a.active {
 
 .d-header-icons .unread-notifications {
   background: $night;
+}
+
+.menu-panel .panel-body-bottom {
+  .btn {
+    border-radius: 20px;
+    background: var(--tertiary);
+    color: var(--secondary);
+    box-shadow: none;
+    .d-icon {
+      color: var(--secondary);
+    }
+    .discourse-no-touch & {
+      &:hover {
+        background: var(--quaternary);
+        color: var(--highlight);
+        .d-icon {
+          color: var(--highlight);
+        }
+      }
+    }
+  }
 }
