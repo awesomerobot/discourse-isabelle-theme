@@ -12,7 +12,7 @@
   }
 }
 
-.post-notice {
+.post-notice:not(.old) {
   border-radius: 10px 10px 0 0;
 }
 .embedded-posts,
@@ -95,7 +95,7 @@ nav.post-controls {
     @include border-radius-small;
     @include border-radius-large;
     color: $sky;
-    transition: top 0.25s;
+    transition: top 0.25s, background-color 0.3s;
     .d-icon {
       color: $sky;
     }
@@ -133,7 +133,8 @@ nav.post-controls {
           }
           &:hover,
           &.d-hover {
-            background: transparent;
+            background: transparent !important;
+            color: $love !important;
           }
           &.has-like {
             .d-icon {
@@ -146,6 +147,7 @@ nav.post-controls {
         position: relative;
         top: -3px;
         color: $secondary;
+
         .d-icon {
           color: $secondary;
         }
@@ -155,6 +157,11 @@ nav.post-controls {
       border-radius: 0;
     }
   }
+}
+
+nav.post-controls .actions a,
+nav.post-controls .actions button {
+  color: $sky;
 }
 
 #share-link {
@@ -366,4 +373,24 @@ aside.onebox,
 aside.quote blockquote,
 aside.quote .title {
   border-color: $mud;
+}
+
+.spinner {
+  border: 4px solid $sky;
+  border-right-color: transparent;
+}
+
+.dismiss-container-top {
+  padding: 1em;
+}
+
+.topic-list-bottom {
+  #dismiss-new {
+    margin: -0.5em 1em 1em 1em;
+  }
+}
+
+.empty-state {
+  padding-top: 1.2em;
+  background: var(--secondary);
 }

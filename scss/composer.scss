@@ -179,7 +179,9 @@
   padding: 0.25em;
   border-radius: 10px 10px 0 0;
   .btn,
-  .btn-default {
+  .btn-default,
+  .select-kit.dropdown-select-box.toolbar-popup-menu-options
+    .select-kit-header {
     border-radius: 20px/19px;
     .d-icon {
       color: darken($mud, 40%);

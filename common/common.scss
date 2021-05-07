@@ -59,6 +59,8 @@ input[type="color"] {
 .group-members-manage .btn,
 .btn-default,
 #show-tag-info,
+.user-main .about .controls li > .select-kit-header,
+.user-main .about .controls .btn,
 .user-badges .btn,
 .signup-cta.alert.alert-info .btn:not(.btn-primary),
 .widget-button.btn.popup-menu-button.toggle-admin-menu.keyboard-target-admin-menu.no-text.btn-icon,
@@ -112,6 +114,17 @@ input[type="color"] {
       box-shadow: none;
       position: relative;
       top: 3px;
+    }
+  }
+}
+
+.create-invite-modal .invite-input-with-button .btn,
+.share-topic-modal .invite-input-with-button .btn {
+  @include border-radius-small;
+  background: $wet_sand;
+  &:hover {
+    .d-icon {
+      color: var(--primary-high);
     }
   }
 }
@@ -190,10 +203,17 @@ input[type="color"] {
   background: $sky;
   border-radius: 20px 20px 0 0;
   padding: 1em 1em 0.5em 1em;
+
   .select-kit.combo-box .combo-box-header > .d-icon {
     color: $secondary;
   }
   margin-bottom: 0;
+}
+
+.desktop-view {
+  .list-controls {
+    min-height: 50px; // minimizes jump on loading
+  }
 }
 
 .admin-controls {
@@ -533,4 +553,37 @@ input[type="color"] {
 
 .signup-cta.alert.alert-info a {
   margin-top: 0.65em;
+}
+
+.badge-notification.new-posts,
+.badge-notification.unread-posts {
+  background: $sky;
+}
+
+div.menu-links-header .menu-links-row button.active:hover,
+div.menu-links-header .menu-links-row button.active {
+  background: $sand;
+  border-color: $sand;
+}
+
+div.menu-links-header .menu-links-row button:not(.active):hover {
+  border-bottom: 1px solid var(--highlight-medium);
+}
+
+.search-advanced-title {
+  margin: 0;
+}
+
+.about .controls .btn {
+  margin-top: 0.5em !important;
+}
+
+.select-kit.dropdown-select-box.notifications-filter
+  .notifications-filter-header {
+  box-shadow: none;
+}
+
+div.edit-category .edit-category-title {
+  background: $wet_sand;
+  @include border-radius-small;
 }
