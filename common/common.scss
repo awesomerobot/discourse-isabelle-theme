@@ -574,6 +574,19 @@ div.menu-links-header .menu-links-row button:not(.active):hover {
   margin: 0;
 }
 
+.body-page {
+  .nav-pills > li > a:not(.active) {
+    color: var(--tertiary);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
+
+.dismiss-container-top {
+  padding: 0;
+}
+
 .about .controls .btn {
   margin-top: 0.5em !important;
 }
