@@ -123,7 +123,6 @@
   }
   .title-and-category {
     box-sizing: border-box;
-    padding: 0 0 0 1em;
   }
 
   &:not(.show-preview) {
@@ -137,6 +136,7 @@
   }
   .submit-panel {
     padding: 0 1em;
+    margin-bottom: 8px;
   }
 }
 
