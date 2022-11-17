@@ -138,6 +138,10 @@
     padding: 0 1em;
     margin-bottom: 8px;
   }
+
+  .mini-tag-chooser .select-kit-header {
+    border-color: $mud;
+  }
 }
 
 .open .grippie {
@@ -163,12 +167,15 @@
   .select-kit.dropdown-select-box.composer-actions .select-kit-header {
     background: $night;
     border-color: $night;
-    border-radius: 25px/19px;
+    border-radius: 25px;
     box-shadow: 0 4px 0 0 $dark_night;
     .d-icon {
       color: $secondary;
       opacity: 1;
     }
+  }
+  .composer-controls .d-icon {
+    color: var(--secondary);
   }
 }
 

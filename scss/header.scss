@@ -138,6 +138,44 @@ div.menu-links-header .menu-links-row li a.active {
   }
 }
 
+.user-menu.revamped {
+  .bottom-tabs,
+  .menu-tabs-container {
+    border: none;
+  }
+  .menu-tabs-container {
+    padding-right: 0.75em;
+    margin-left: 0.75em;
+    padding-bottom: 0.75em;
+  }
+  .quick-access-panel {
+    padding-right: 0;
+    li:first-child {
+      border-radius: 20px 20px 0 0;
+    }
+  }
+  .tabs-list .btn {
+    border-radius: 20px;
+    margin-bottom: 0.25em;
+    .d-icon {
+      color: $sand;
+    }
+    &.active .d-icon {
+      color: $sky;
+    }
+    &:hover {
+      background: $light_gold;
+      .d-icon {
+        color: $sky;
+      }
+    }
+  }
+
+  .tabs-list .btn .badge-notification {
+    background: $water;
+  }
+}
+
 .menu-panel .d-icon {
   color: $primary-medium;
 }

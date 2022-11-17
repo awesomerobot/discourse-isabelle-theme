@@ -7,6 +7,8 @@
 @import "topic";
 @import "categories";
 @import "select-kit";
+@import "sidebar";
+@import "chat";
 
 // global
 .alert.alert-info {
@@ -24,6 +26,8 @@
 .group-form-bio,
 .user-preferences .warning,
 .select-kit.multi-select .multi-select-header,
+.dc-filter-input-container,
+.channel-members-view__search-input-container,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -64,7 +68,9 @@ input[type="color"] {
 .user-badges .btn,
 .signup-cta.alert.alert-info .btn:not(.btn-primary),
 .widget-button.btn.popup-menu-button.toggle-admin-menu.keyboard-target-admin-menu.no-text.btn-icon,
-.widget-button.btn.popup-menu-button.toggle-admin-menu.no-text.btn-icon {
+.widget-button.btn.popup-menu-button.toggle-admin-menu.no-text.btn-icon,
+.new-channel-btn,
+.topic-notifications-options .dropdown-select-box-header {
   @include btn(
     $text-color: $secondary,
     $bg-color: $night,
@@ -80,7 +86,7 @@ input[type="color"] {
     top: 3px;
   }
   padding: 0.75em 1em;
-  border-radius: 25px/19px;
+  border-radius: 25px;
   box-shadow: 0 4px 0 0 $dark_night;
 }
 
@@ -99,13 +105,13 @@ input[type="color"] {
     top: 3px;
   }
   padding: 0.75em 1em;
-  border-radius: 25px/19px;
+  border-radius: 25px;
   box-shadow: 0 4px 0 0 darken($love, 25%);
 }
 
 .btn-danger {
   padding: 0.75em 1em;
-  border-radius: 25px/19px;
+  border-radius: 25px;
   box-shadow: 0 4px 0 0 darken($love, 25%);
   transition: top 0.25s;
 
@@ -188,6 +194,10 @@ input[type="color"] {
   .timeline-footer-controls
   button {
   margin-right: 0.25em;
+}
+
+.timeline-footer-controls {
+  flex-wrap: nowrap;
 }
 
 #show-tag-info {
@@ -568,6 +578,16 @@ div.menu-links-header .menu-links-row button.active {
 
 div.menu-links-header .menu-links-row button:not(.active):hover {
   border-bottom: 1px solid var(--highlight-medium);
+}
+
+.search-container .search-header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  @include border-radius-large;
+}
+
+#search-type-header {
+  height: 100%;
 }
 
 .search-advanced-title {

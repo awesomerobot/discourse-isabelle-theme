@@ -1,0 +1,15 @@
+.chat-browse-view,
+.chat-tabs {
+  .nav-pills > li > a {
+    color: $water;
+  }
+}
+
+.has-full-page-chat:not(.discourse-sidebar) .full-page-chat,
+.full-page-chat .chat-full-page-header {
+  border: none;
+}
+
+.full-page-chat .chat-full-page-header {
+  background: transparent;
+}
