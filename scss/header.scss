@@ -291,6 +291,19 @@ div.menu-links-header .menu-links-row li a.active {
   background: $night;
 }
 
+.menu-panel {
+  .empty-state {
+    @include border-radius-large;
+  }
+}
+
+.user-menu .quick-access-panel li.do-not-disturb {
+  background: $sand;
+  &:hover {
+    background: $light_gold;
+  }
+}
+
 .menu-panel .panel-body-bottom {
   .btn {
     border-radius: 20px;

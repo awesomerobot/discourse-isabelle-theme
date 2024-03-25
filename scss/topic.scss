@@ -95,7 +95,9 @@ nav.post-controls {
     @include border-radius-small;
     @include border-radius-large;
     color: $sky;
-    transition: top 0.25s, background-color 0.3s;
+    transition:
+      top 0.25s,
+      background-color 0.3s;
     .d-icon {
       color: $sky;
     }
@@ -278,6 +280,14 @@ nav.post-controls .actions button {
   box-sizing: border-box;
   .topic-category > .badge-wrapper.bullet span.badge-category {
     color: $secondary;
+  }
+  .badge-category__wrapper {
+    .badge-category__name {
+      color: $secondary;
+    }
+    .d-icon {
+      color: $secondary;
+    }
   }
 }
 

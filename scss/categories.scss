@@ -4,8 +4,9 @@
 
 .category-boxes,
 .category-boxes-with-topics {
+  box-sizing: border-box;
   margin-top: 0;
-  padding-top: 2em;
+  padding: 1em;
 }
 
 .category-heading {

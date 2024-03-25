@@ -43,6 +43,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   @include border-radius-small;
+  border-color: $mud;
 }
 
 .user-preferences .bio-composer .d-editor-preview,
@@ -267,6 +268,17 @@ input[type="color"] {
   .btn-icon {
     font-size: 1.1em;
   }
+  .select-kit.combo-box .select-kit-header {
+    border-color: $water;
+    @include border-radius-large;
+  }
+  .select-kit .select-kit-header {
+    .d-icon,
+    .selected-name,
+    .badge-category__name {
+      color: $secondary;
+    }
+  }
 }
 
 .nav-pills > li > a {
@@ -367,8 +379,10 @@ input[type="color"] {
 
 .user-card,
 .group-card {
-  box-shadow: 0 4px 0 0 $mud;
-  border: 1px solid $mud;
+  &.show {
+    box-shadow: 0 4px 0 0 $mud;
+    border: 1px solid $mud;
+  }
 }
 
 .user-card .badge-section .user-badge,
@@ -609,6 +623,10 @@ div.menu-links-header .menu-links-row button:not(.active):hover {
 
 .about .controls .btn {
   margin-top: 0.5em !important;
+}
+
+.select-kit.combo-box .select-kit-header {
+  border-color: $mud;
 }
 
 .select-kit.dropdown-select-box.notifications-filter

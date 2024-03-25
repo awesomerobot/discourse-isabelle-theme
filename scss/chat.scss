@@ -1,3 +1,7 @@
+body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
+  gap: 0 2em;
+}
+
 .chat-browse-view,
 .chat-tabs {
   .nav-pills > li > a {
@@ -12,4 +16,39 @@
 
 .full-page-chat .chat-full-page-header {
   background: transparent;
+}
+
+#main-chat-outlet {
+  margin-top: 1.75em;
+}
+
+.chat-channel {
+  box-sizing: border-box;
+  border: 1px solid $mud;
+  border-radius: 0 0 25px 25px;
+  border-top: none;
+  box-shadow: 0 4px 0 1px $mud;
+  height: calc(
+    var(--chat-vh, 1vh) * 100 - var(--header-offset, 0px) - 1px - var(
+        --chat-header-offset,
+        0px
+      ) - var(--composer-height, 0px) - 5em
+  );
+}
+
+.c-navbar-container {
+  background: $sand;
+  border: 1px solid $mud;
+  box-shadow: 0 1px 0 1px $mud;
+  border-radius: 25px 25px 0 0;
+  border-bottom: none;
+}
+
+.chat-drawer .chat-drawer-container {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  .chat-channel {
+    background: $secondary;
+  }
 }

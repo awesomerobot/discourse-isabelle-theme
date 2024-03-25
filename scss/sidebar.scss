@@ -15,16 +15,31 @@
 }
 
 .sidebar-wrapper {
-  --d-sidebar-highlight-color: #{$light_gold};
+  --d-sidebar-link-icon-color: #{$mud};
+  --d-sidebar-highlight-color: #{$sand};
+  --d-sidebar-highlight-background: #{$sand};
   margin: 1.5em 0 1.5em 10px;
-
   background: transparent;
   top: calc(var(--header-offset) + 1.5em);
+  height: calc(
+    var(--composer-vh, var(--1dvh)) * 100 - var(--header-offset, 0px) - 5em
+  );
+
   @include border-radius-large;
 
   .has-sidebar-page & {
     box-shadow: 0 4px 0 1px $mud;
     border: 1px solid $mud;
+  }
+
+  .sidebar-container {
+    border: none;
+  }
+}
+
+.sidebar-section-link-hover {
+  button {
+    color: $mud !important;
   }
 }
 
@@ -32,8 +47,15 @@
   border-color: transparent;
 }
 
+.sidebar-footer-wrapper .sidebar-footer-actions-button.btn:hover .d-icon {
+  color: $mud;
+}
+
 .sidebar-section-link-wrapper .sidebar-section-link.active {
-  background: $light_gold;
+  background: $mud;
+  &:hover {
+    background: $mud;
+  }
 }
 
 .sidebar-section-link-wrapper .sidebar-section-link:focus,

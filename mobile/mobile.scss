@@ -20,6 +20,10 @@
   margin: 10px 0 0;
 }
 
+.topic-list .topic-list-data {
+  padding: 1em;
+}
+
 .topic-list td {
   padding: 0.75em 0.5em;
 }
@@ -30,8 +34,11 @@
 
 .navigation-toggle {
   border: none !important;
-  @include border-radius-large;
   background: $water;
+}
+
+.list-controls .nav-pills > li {
+  @include border-radius-large;
 }
 
 .nav-pills > li > a .d-icon {
@@ -161,4 +168,14 @@ tr.category-topic-link {
 
 .container.posts > .row {
   max-width: calc(100vw - 55px);
+}
+
+.c-routes-direct-messages,
+.c-routes-channels,
+.c-routes-threads {
+  background: transparent;
+}
+
+.btn.no-text.btn-icon.bulk-select {
+  background: transparent;
 }
