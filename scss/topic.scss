@@ -39,6 +39,10 @@
   border-color: $wet_sand;
 }
 
+.small-action .small-action-desc {
+  color: var(--primary);
+}
+
 .small-action .topic-avatar .d-icon {
   color: $primary-high;
   font-size: 1.7em;
@@ -89,6 +93,11 @@ nav.post-controls button.create {
 .discourse-no-touch .topic-body .actions .fade-out {
   opacity: 1;
 }
+
+.small-action .btn {
+  box-shadow: none !important;
+}
+
 .small-action,
 nav.post-controls {
   button {

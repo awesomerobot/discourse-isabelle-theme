@@ -638,3 +638,26 @@ div.edit-category .edit-category-title {
   background: $wet_sand;
   @include border-radius-small;
 }
+
+.new-user-wrapper .user-navigation .nav-pills li a {
+  color: var(--tertiary);
+
+  &.active {
+    color: $gold;
+    border-color: $gold;
+  }
+
+  &:hover,
+  &:focus {
+    color: $gold;
+    border-color: currentColor;
+    .d-icon {
+      color: currentColor;
+    }
+  }
+
+  .d-icon,
+  span {
+    color: currentColor;
+  }
+}
