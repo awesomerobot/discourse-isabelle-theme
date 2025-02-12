@@ -1,3 +1,30 @@
+.sidebar-wrapper {
+  --d-sidebar-link-icon-color: #{$mud};
+  --d-sidebar-link-badge-color: #{$sky};
+  // example: chat participant count
+  --d-sidebar-prefix-background: #{$sky};
+  --d-sidebar-prefix-color: #{$sand};
+
+  // example: unread dot
+  --d-sidebar-suffix-color: #{$sky};
+
+  // highlight applies to both hover and focus states
+  --d-sidebar-highlight-background: #{$sand};
+  --d-sidebar-highlight-prefix-background: #{$sky};
+  --d-sidebar-highlight-prefix-color: #{$sand};
+  --d-sidebar-highlight-suffix-color: #{$sky};
+
+  --d-sidebar-active-background: #{$wet_sand};
+  --d-sidebar-active-color: var(--d-sidebar-link-color);
+  --d-sidebar-active-icon-color: var(--d-sidebar-link-color);
+  --d-sidebar-active-prefix-background: #{$sky};
+  --d-sidebar-active-suffix-color: #{$sky};
+}
+
+.sidebar-section-wrapper {
+  border-color: #{$wet_sand};
+}
+
 .header-sidebar-toggle button {
   border-radius: 100px;
   padding: 0.5em;
@@ -15,9 +42,6 @@
 }
 
 .sidebar-wrapper {
-  --d-sidebar-link-icon-color: #{$mud};
-  --d-sidebar-highlight-color: #{$sand};
-  --d-sidebar-highlight-background: #{$sand};
   margin: 1.5em 0 1.5em 10px;
   background: transparent;
   top: calc(var(--header-offset) + 1.5em);
@@ -37,36 +61,14 @@
   }
 }
 
-.sidebar-section-link-hover {
-  button {
-    color: $mud !important;
-  }
-}
-
-.sidebar-footer-wrapper .sidebar-footer-container {
-  border-color: transparent;
-}
-
-.sidebar-footer-wrapper .sidebar-footer-actions-button.btn:hover .d-icon {
-  color: $mud;
-}
-
-.sidebar-section-link-wrapper .sidebar-section-link.active {
-  background: $mud;
-  &:hover {
-    background: $mud;
-  }
-}
-
-.sidebar-section-link-wrapper .sidebar-section-link:focus,
-.sidebar-section-link-wrapper .sidebar-section-link:hover {
-  background: $sand;
-}
-
 .sidebar-footer-wrapper .sidebar-footer-container::before {
   background: linear-gradient(
     to bottom,
     rgba(var(--secondary-low-rgb), 0),
     rgba(var(--secondary-low-rgb), 1)
   );
+}
+
+.sidebar-section-link-wrapper .sidebar-section-link {
+  border-radius: 10px;
 }

@@ -1,12 +1,10 @@
-body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
-  gap: 0 2em;
+.chat-skeleton {
+  --primary-100: #{$wet_sand};
+  --primary-200: #{$sand};
 }
 
-.chat-browse-view,
-.chat-tabs {
-  .nav-pills > li > a {
-    color: $water;
-  }
+body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
+  gap: 0 2em;
 }
 
 .has-full-page-chat:not(.discourse-sidebar) .full-page-chat,
@@ -51,4 +49,8 @@ body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
   .chat-channel {
     background: $secondary;
   }
+}
+
+.chat-message-actions .more-buttons.dropdown-select-box .select-kit-body {
+  border-color: $mud;
 }

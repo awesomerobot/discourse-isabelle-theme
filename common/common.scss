@@ -11,6 +11,7 @@
 @import "chat";
 
 // global
+
 .alert.alert-info {
   background: $sand;
   border-radius: 15px;
@@ -229,36 +230,6 @@ input[type="color"] {
 
 .admin-controls {
   padding: 1em 0;
-
-  nav,
-  .nav-pills {
-    padding: 0 0.5em;
-    background: transparent;
-    > li a.active {
-      background: $water;
-    }
-  }
-  nav::before {
-    background: linear-gradient(to right, $sky 0%, rgba(213, 222, 214, 0) 100%);
-  }
-  nav::after {
-    background: linear-gradient(to left, $sky 0%, rgba(213, 222, 214, 0) 100%);
-  }
-}
-
-.nav-pills > li > a .d-icon {
-  opacity: 1;
-  color: $water;
-}
-.nav-pills > li a.active,
-.nav-pills > li a.active:hover {
-  .d-icon {
-    color: $gold;
-  }
-}
-.nav-pills > li > a:hover .d-icon {
-  opacity: 1;
-  color: $secondary;
 }
 
 .navigation-container {
@@ -278,20 +249,6 @@ input[type="color"] {
     .badge-category__name {
       color: $secondary;
     }
-  }
-}
-
-.nav-pills > li > a {
-  padding: calc(0.65em + 1px) 1em; // account for border
-  @include border-radius-large;
-  color: $secondary;
-  margin-right: 0.25em;
-  &:hover {
-    background: $water;
-    color: $secondary;
-  }
-  &.active {
-    color: $gold;
   }
 }
 
@@ -504,15 +461,6 @@ input[type="color"] {
   margin-top: 0.5em;
 }
 
-.reviewable {
-  .nav-pills > li > a {
-    background: $sky;
-    &.active {
-      background: $water;
-    }
-  }
-}
-
 .reviewable .reviewable-container .reviewable-list + .reviewable-filters {
   background: $sand;
   div.ac-wrap,
@@ -608,15 +556,6 @@ div.menu-links-header .menu-links-row button:not(.active):hover {
   margin: 0;
 }
 
-.body-page {
-  .nav-pills > li > a:not(.active) {
-    color: var(--tertiary);
-    &:hover {
-      color: var(--secondary);
-    }
-  }
-}
-
 .dismiss-container-top {
   padding: 0;
 }
@@ -639,25 +578,64 @@ div.edit-category .edit-category-title {
   @include border-radius-small;
 }
 
-.new-user-wrapper .user-navigation .nav-pills li a {
-  color: var(--tertiary);
+.private-message-glyph {
+  color: var(--secondary);
+}
 
+a.mention.--current,
+a.mention-group.--current {
+  background: #{$gold};
+}
+
+.user-menu.revamped #quick-access-profile hr {
+  display: none;
+}
+
+.user-navigation .nav-pills > li a,
+.nav-pills > li a {
+  @include border-radius-large;
+}
+
+.new-user-wrapper .user-navigation {
+  padding-block: 0.5em;
+  border-color: #{$sand};
+}
+
+.user-navigation-primary {
+  border-top: 1px solid #{$sand};
+}
+
+:root {
+  --d-nav-color: var(--primary);
+  --d-nav-color--hover: #{$sand};
+  --d-nav-bg-color--hover: #{$water};
+  --d-nav-color--active: #{$gold};
+  --d-nav-bg-color--active: var(--quaternary);
+  --d-nav-border-color--active: #{$gold};
+  --d-nav-underline-height: 0;
+}
+
+#navigation-bar.nav-pills > li > a {
+  color: #{$sand};
   &.active {
-    color: $gold;
-    border-color: $gold;
+    color: #{$gold};
   }
+}
 
-  &:hover,
-  &:focus {
-    color: $gold;
-    border-color: currentColor;
-    .d-icon {
-      color: currentColor;
-    }
-  }
+.archetype-private_message .current-user-post .regular.contents {
+  background: #{$sand};
+  border-color: #{$sand};
+}
 
-  .d-icon,
-  span {
-    color: currentColor;
-  }
+.archetype-private_message .regular.contents {
+  border-radius: 20px;
+}
+
+.user-content-wrapper .user-primary-navigation .horizontal-overflow-nav {
+  border: none;
+}
+
+.group .user-secondary-navigation {
+  border: none;
+  margin-top: 1em;
 }

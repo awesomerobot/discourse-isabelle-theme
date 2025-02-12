@@ -37,14 +37,6 @@
   background: $water;
 }
 
-.list-controls .nav-pills > li {
-  @include border-radius-large;
-}
-
-.nav-pills > li > a .d-icon {
-  color: $secondary;
-}
-
 .list-controls .nav-pills .drop {
   box-shadow: 0 5px 0 0 $mud;
   @include border-radius-large;
@@ -173,9 +165,5 @@ tr.category-topic-link {
 .c-routes-direct-messages,
 .c-routes-channels,
 .c-routes-threads {
-  background: transparent;
-}
-
-.btn.no-text.btn-icon.bulk-select {
   background: transparent;
 }

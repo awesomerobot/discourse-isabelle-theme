@@ -152,6 +152,10 @@
   position: absolute;
   margin: 0 40px;
   background: transparent;
+
+  &:before {
+    border-color: var(--secondary);
+  }
 }
 
 #reply-control .reply-to {
