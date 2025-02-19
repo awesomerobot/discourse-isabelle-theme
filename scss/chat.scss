@@ -22,8 +22,7 @@ body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
 
 .chat-channel {
   box-sizing: border-box;
-  border: 1px solid $mud;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0;
   border-top: none;
   box-shadow: 0 4px 0 1px $mud;
   height: calc(
@@ -36,21 +35,67 @@ body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
 
 .c-navbar-container {
   background: $sand;
-  border: 1px solid $mud;
   box-shadow: 0 1px 0 1px $mud;
   border-radius: 25px 25px 0 0;
   border-bottom: none;
 }
 
 .chat-drawer .chat-drawer-container {
-  border: none;
+  border: 2px solid $mud;
+  border-bottom: none;
   box-shadow: none;
   background: transparent;
+  border-radius: 25px 25px 0 0;
   .chat-channel {
     background: $secondary;
   }
 }
 
+.has-full-page-chat {
+  .chat-channel {
+    border-radius: 0 0 25px 25px;
+    border-inline: 1px solid $mud;
+  }
+  .c-navbar-container {
+    border-top: 1px solid $mud;
+  }
+}
+
 .chat-message-actions .more-buttons.dropdown-select-box .select-kit-body {
   border-color: $mud;
+}
+
+.chat-drawer-content {
+  background: var(--secondary);
+}
+
+.c-user-thread,
+.chat-drawer-container
+  .channels-list-container
+  .chat-channel-row:not(:last-of-type) {
+  border-color: $mud;
+}
+
+.c-footer {
+  border-color: $mud;
+  .btn .d-icon {
+    margin: 0;
+  }
+
+  &__item {
+    .discourse-no-touch & {
+      &:hover {
+        .d-button-label,
+        .d-icon {
+          color: $sky;
+        }
+      }
+    }
+    &.--active {
+      .d-button-label,
+      .d-icon {
+        color: $sky;
+      }
+    }
+  }
 }
