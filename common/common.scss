@@ -639,3 +639,10 @@ a.mention-group.--current {
   border: none;
   margin-top: 1em;
 }
+
+#create-topic[disabled] + .fk-d-tooltip__trigger {
+  background: transparent;
+  font-size: var(--font-up-3);
+  order: -1;
+  margin-top: 0.15em;
+}
