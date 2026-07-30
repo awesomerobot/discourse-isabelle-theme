@@ -1,0 +1,49 @@
+// Text inputs, editor previews, and other form controls. Select-kit's own
+// styling lives in select-kit.scss.
+
+.select-kit.combo-box .select-kit-header,
+.user-preferences .bio-composer,
+.group-form-bio,
+.user-preferences .warning,
+.select-kit.multi-select .multi-select-header,
+.dc-filter-input-container,
+.channel-members-view__search-input-container,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  @include border-radius-small;
+  border-color: $mud;
+}
+
+// duplicate of the border-color above; kept for now, see README
+.select-kit.combo-box .select-kit-header {
+  border-color: $mud;
+}
+
+.user-preferences .bio-composer .d-editor-preview,
+.group-form-bio .d-editor-preview,
+.edit-category-tab-topic-template .d-editor-preview {
+  background: $sand;
+  @include border-radius-small;
+  padding: 0.25em 0.5em;
+}
+
+.colorpicker-wrapper {
+  .add-on {
+    border-radius: 10px 0 0 10px;
+    + input {
+      border-radius: 0 10px 10px 0 !important;
+    }
+  }
+}

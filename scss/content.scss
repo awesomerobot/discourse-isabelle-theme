@@ -1,0 +1,50 @@
+// Cooked post content: quotes, code, images, and the share link that hangs off
+// a post.
+
+blockquote,
+aside.onebox,
+aside.quote blockquote,
+aside.quote .title {
+  border-color: $mud;
+}
+
+p > code,
+li > code,
+pre > code,
+#share-link {
+  background: $sand;
+  box-shadow: none;
+}
+
+#share-link {
+  @include border-radius-small;
+}
+
+.discourse-no-touch a.lightbox {
+  &:hover {
+    box-shadow: 0 4px 0 1px $mud;
+  }
+  &.active {
+    box-shadow: 0;
+    top: 0;
+    position: relative;
+  }
+}
+
+.discourse-local-dates-create-modal
+  .form
+  .date-time-configuration
+  .date-time-control
+  .date-time {
+  background: transparent !important;
+}
+
+// highlight flashed on a post when you jump to it
+@keyframes background-fade-highlight {
+  0% {
+    background-color: $light_gold;
+  }
+  100% {
+    background-color: transparent;
+  }
+}

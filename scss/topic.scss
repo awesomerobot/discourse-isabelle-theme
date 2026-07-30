@@ -1,3 +1,11 @@
+// The topic page: posts, post controls, the timeline and the topic header.
+// Cooked post content lives in content.scss.
+//
+// Sections run in DOM-ish order and several rules across them share
+// specificity, so add new rules to the end of the section they belong to.
+
+// post controls
+
 :root {
   --d-post-control-border-radius: 20px;
   --d-post-control-text-color--hover: var(--primary);
@@ -17,43 +25,29 @@
   background: #{$wet_sand};
 }
 
-.topic-map,
-.post-notice {
-  border-color: $wet_sand;
-}
-.topic-map.--op,
-.topic-map {
-  overflow: hidden;
-  border-color: $wet_sand;
-  section {
-    border-color: $wet_sand;
+nav.post-controls button.create {
+  color: $sky;
+
+  .d-icon {
+    color: $sky;
   }
 }
 
-.post-notice:not(.old) {
-  border-radius: 10px 10px 0 0;
-}
-.embedded-posts,
-.embedded-posts.bottom .row .topic-avatar,
-.embedded-posts.bottom .row .topic-body {
-  border-color: $wet_sand;
+.discourse-no-touch .topic-body .actions .fade-out {
+  opacity: 1;
 }
 
-.topic-map .buttons .btn {
-  border-color: $wet_sand;
-  border-top: none;
-  &:hover {
-    background: $mud;
-    .d-icon {
-      color: $secondary;
-    }
-  }
-}
+// post dividers and small actions
 
 .small-action,
 .topic-body,
 .small-action .small-action-desc,
 .gap {
+  border-color: $wet_sand;
+}
+
+.topic-body,
+.topic-avatar {
   border-color: $wet_sand;
 }
 
@@ -67,104 +61,50 @@
   padding-top: 0.1em;
 }
 
-.topic-body,
-.topic-avatar {
-  border-color: $wet_sand;
+.small-action .btn {
+  box-shadow: none !important;
 }
 
 .topic-status-info {
   border-color: $wet_sand;
 }
 
-.timeline-container .topic-timeline {
-  padding-top: 1.5em;
-  .timeline-scrollarea {
-    border-color: $mud;
-  }
-  .timeline-handle {
-    background: $gold;
-  }
+// topic map and notices
 
-  .start-date,
-  .now-date,
-  .timeline-ago {
-    color: $primary-high;
-  }
-}
-
-.timeline-container .topic-timeline .timeline-footer-controls {
-  margin-top: 0;
-}
-
-.timeline-scrollarea-wrapper {
-  padding-bottom: 2em;
-}
-
-nav.post-controls button.create {
-  color: $sky;
-
-  .d-icon {
-    color: $sky;
-  }
-}
-
-.discourse-no-touch .topic-body .actions .fade-out {
-  opacity: 1;
-}
-
-.small-action .btn {
-  box-shadow: none !important;
-}
-
-#share-link {
-  @include border-radius-small;
-}
-.user-card.show,
-.group-card.show {
-  @include border-radius-large;
-}
-
-.user-card .card-content,
-.group-card .card-content {
-  background: transparent;
-}
-
-.suggested-topics {
-  table {
-    margin: 0;
-    tr:last-of-type {
-      border-bottom: none;
-    }
-  }
-  .topics {
-    @include border-radius-small;
-    overflow: hidden;
-    padding-bottom: 0;
-    border: 1px solid $wet_sand;
-  }
-}
-
-.paginated-topics-list {
-  .topic-list {
-    @include border-radius-small;
-    overflow: hidden;
-  }
-  tbody {
-    border: 1px solid $wet_sand;
-  }
-  .topic-list-item td:first-child {
-    border-left: 1px solid $wet_sand;
-  }
-}
-
-.user-stream .item,
-.user-stream .user-stream-item {
+.topic-map,
+.post-notice {
   border-color: $wet_sand;
 }
+.topic-map.--op,
+.topic-map {
+  overflow: hidden;
+  border-color: $wet_sand;
+  section {
+    border-color: $wet_sand;
+  }
+}
 
-.suggested-topics-message {
-  font-weight: normal;
-  margin-top: 1em;
+.topic-map .buttons .btn {
+  border-color: $wet_sand;
+  border-top: none;
+  &:hover {
+    background: $mud;
+    .d-icon {
+      color: $secondary;
+    }
+  }
+}
+
+.post-notice:not(.old) {
+  border-radius: 10px 10px 0 0;
+}
+
+// embedded (in-reply-to) posts
+
+.embedded-posts,
+.embedded-posts.bottom .row .topic-avatar,
+.embedded-posts.bottom .row .topic-body {
+  border-color: $wet_sand;
 }
 
 .embedded-posts .collapse-down,
@@ -190,6 +130,86 @@ nav.post-controls button.create {
 .read-state {
   color: $sky;
 }
+
+// timeline and progress
+
+.timeline-container .topic-timeline {
+  padding-top: 1.5em;
+  .timeline-scrollarea {
+    border-color: $mud;
+  }
+  .timeline-handle {
+    background: $gold;
+  }
+
+  .start-date,
+  .now-date,
+  .timeline-ago {
+    color: $primary-high;
+  }
+}
+
+.timeline-container .topic-timeline .timeline-footer-controls {
+  margin-top: 0;
+}
+
+// the fullscreen timeline's buttons are spaced in buttons.scss, next to the
+// rest of their styling
+
+.timeline-footer-controls {
+  flex-wrap: nowrap;
+}
+
+.timeline-scrollarea-wrapper {
+  padding-bottom: 2em;
+}
+
+#topic-progress {
+  color: $primary-high;
+  border-radius: 10px 10px 0 0;
+  border-color: $mud;
+  box-shadow: 0 4px 0 0 $mud;
+
+  .bg {
+    background: $light_gold;
+    border-right-color: $light_gold;
+    border-radius: 10px 10px 0 0;
+
+    .staff & {
+      border-radius: 0 10px 0 0;
+    }
+    .docked & {
+      @include border-radius-small;
+    }
+  }
+  .staff & {
+    border-radius: 0 10px 0 0;
+  }
+  .docked & {
+    @include border-radius-small;
+  }
+}
+
+#topic-progress-wrapper .btn {
+  padding: 4px 12px;
+  border-radius: 10px 0 0 0;
+  .docked & {
+    @include border-radius-small;
+  }
+}
+
+// bookmark reminder tiles
+
+.tap-tile-grid .tap-tile {
+  &:hover {
+    background: $light_gold;
+  }
+  &.active {
+    background: $gold;
+  }
+}
+
+// topic layout — posts sit in a bordered panel below the sky-colored title
 
 .container.posts {
   border: 2px solid $mud;
@@ -241,6 +261,13 @@ nav.post-controls button.create {
   }
 }
 
+.top-title-buttons {
+  display: block;
+  margin-top: 0.5em;
+}
+
+// topic footer
+
 #topic-footer-buttons {
   margin-top: 2em;
   .bookmark.bookmarked .d-icon-bookmark {
@@ -248,133 +275,33 @@ nav.post-controls button.create {
   }
 }
 
-.tap-tile-grid .tap-tile {
-  &:hover {
-    background: $light_gold;
-  }
-  &.active {
-    background: $gold;
-  }
-}
-
-#topic-progress {
-  color: $primary-high;
-  border-radius: 10px 10px 0 0;
-  border-color: $mud;
-  box-shadow: 0 4px 0 0 $mud;
-
-  .bg {
-    background: $light_gold;
-    border-right-color: $light_gold;
-    border-radius: 10px 10px 0 0;
-
-    .staff & {
-      border-radius: 0 10px 0 0;
-    }
-    .docked & {
-      @include border-radius-small;
+.suggested-topics {
+  table {
+    margin: 0;
+    tr:last-of-type {
+      border-bottom: none;
     }
   }
-  .staff & {
-    border-radius: 0 10px 0 0;
-  }
-  .docked & {
+  .topics {
     @include border-radius-small;
+    overflow: hidden;
+    padding-bottom: 0;
+    border: 1px solid $wet_sand;
   }
 }
 
-#topic-progress-wrapper .btn {
-  padding: 4px 12px;
-  border-radius: 10px 0 0 0;
-  .docked & {
-    @include border-radius-small;
-  }
+.suggested-topics-message {
+  font-weight: normal;
+  margin-top: 1em;
 }
 
-@keyframes background-fade-highlight {
-  0% {
-    background-color: $light_gold;
-  }
-  100% {
-    background-color: transparent;
-  }
+// private messages
+
+.archetype-private_message .current-user-post .regular.contents {
+  background: #{$sand};
+  border-color: #{$sand};
 }
 
-.discourse-local-dates-create-modal
-  .form
-  .date-time-configuration
-  .date-time-control
-  .date-time {
-  background: transparent !important;
-}
-p > code,
-li > code,
-pre > code,
-#share-link {
-  background: $sand;
-  box-shadow: none;
-}
-
-nav.post-controls .post-admin-menu,
-.topic-admin-popup-menu {
-  border: none;
-  box-shadow: none;
-  @include border-radius-small;
-}
-nav.post-controls .post-admin-menu h3,
-.popup-menu h3 {
-  text-align: center;
-  color: $secondary;
-}
-
-blockquote,
-aside.onebox,
-aside.quote blockquote,
-aside.quote .title {
-  border-color: $mud;
-}
-
-.spinner {
-  border: 4px solid $sky;
-  border-right-color: transparent;
-}
-
-.dismiss-container-top {
-  padding: 1em;
-}
-
-.topic-list-bottom {
-  #dismiss-new {
-    margin: -0.5em 1em 1em 1em;
-  }
-}
-
-.empty-state {
-  padding-top: 1.2em;
-  background: var(--secondary);
-}
-
-.dropdown-menu__item {
-  .discourse-no-touch & {
-    button {
-      &:hover {
-        color: var(--primary);
-        background: #{$wet_sand};
-        .d-icon {
-          color: var(--primary);
-        }
-      }
-    }
-  }
-
-  .btn-danger {
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    .discourse-no-touch & {
-      &:hover {
-        top: 0;
-      }
-    }
-  }
+.archetype-private_message .regular.contents {
+  border-radius: 20px;
 }

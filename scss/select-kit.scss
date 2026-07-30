@@ -1,3 +1,8 @@
+// Select-kit: dropdowns, combo boxes and multi selects. Menu-like select-kit
+// bodies are further overridden in menus.scss.
+
+// headers
+
 .group-nav .select-kit.combo-box .select-kit-header,
 .list-controls .combo-box .combo-box-header {
   padding: 0.6em 1em;
@@ -9,20 +14,6 @@
   &[aria-expanded="true"] {
     border-radius: 20px 20px 0 0;
   }
-}
-
-.select-kit.is-expanded .select-kit-body {
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 0 1px $mud;
-}
-
-.select-kit.single-select .select-kit-filter.is-expanded {
-  border-color: $mud;
-}
-
-.select-kit .select-kit-row.is-selected.is-highlighted,
-.select-kit .select-kit-row.is-highlighted {
-  background: $light_gold;
 }
 
 .select-kit .select-kit-header {
@@ -42,12 +33,41 @@
   }
 }
 
+.select-kit.single-select .select-kit-filter.is-expanded {
+  border-color: $mud;
+}
+
+// bodies — a dropdown continues the shape of its header
+
+.select-kit.is-expanded .select-kit-body {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 0 1px $mud;
+}
+
+.select-kit.dropdown-select-box .select-kit-body {
+  border: none;
+}
+.select-kit.dropdown-select-box.is-expanded .select-kit-collection,
+.select-kit.dropdown-select-box.is-expanded .select-kit-body,
+.select-kit .select-kit-body {
+  @include border-radius-small;
+}
+
+// rows
+
+.select-kit .select-kit-row.is-selected.is-highlighted,
+.select-kit .select-kit-row.is-highlighted {
+  background: $light_gold;
+}
+
 .select-kit .select-kit-row.is-selected {
   background: $sand;
   &:hover {
     background: $sand;
   }
 }
+
+// composer toolbar dropdowns
 
 .select-kit.dropdown-select-box.toolbar-popup-menu-options {
   .select-kit-body {
@@ -67,14 +87,7 @@
   }
 }
 
-.select-kit.dropdown-select-box .select-kit-body {
-  border: none;
-}
-.select-kit.dropdown-select-box.is-expanded .select-kit-collection,
-.select-kit.dropdown-select-box.is-expanded .select-kit-body,
-.select-kit .select-kit-body {
-  @include border-radius-small;
-}
+// period chooser (top / new / unread pickers) opts out of the shadow
 
 .select-kit.dropdown-select-box.period-chooser .period-chooser-header {
   border-radius: 0;

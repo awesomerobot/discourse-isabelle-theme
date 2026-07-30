@@ -1,3 +1,11 @@
+// The composer: its panel, the title/category row, the editor toolbar and the
+// emoji picker.
+//
+// Rule order here is the original order — several pairs below sit at equal
+// specificity, so keep new rules next to the ones they belong with.
+
+// title, category and tag inputs
+
 #reply-title {
   @include border-radius-small;
   border-color: $mud;
@@ -46,10 +54,15 @@
   }
 }
 
+// editor
+
 .d-editor-textarea-wrapper {
   @include border-radius-small;
   border-color: $mud;
 }
+
+// edit reason and reply-to labels
+
 #reply-control .display-edit-reason .d-icon {
   padding-top: 0.4em;
   color: $night;
@@ -59,6 +72,8 @@
   color: $night;
   padding-top: 0.2em;
 }
+
+// draft and saving states
 
 #reply-control.draft,
 #reply-control.saving {
@@ -75,6 +90,8 @@
   }
 }
 
+// upload metadata
+
 .meta {
   background: $sand;
   color: $primary-high;
@@ -87,6 +104,8 @@
     color: $primary-high;
   }
 }
+
+// the panel itself
 
 #reply-control {
   border-radius: 40px 40px 0 0;
@@ -158,6 +177,8 @@
   }
 }
 
+// the sky-colored bar across the top of the composer
+
 #reply-control .reply-to {
   color: $secondary;
   .action-title {
@@ -182,6 +203,12 @@
     color: var(--secondary);
   }
 }
+
+#reply-control .reply-to .composer-actions-trigger {
+  border: none;
+}
+
+// toolbar
 
 .d-editor-button-bar {
   border: none;

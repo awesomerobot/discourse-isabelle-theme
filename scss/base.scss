@@ -1,0 +1,51 @@
+// Site-wide defaults: custom properties and small elements that aren't tied to
+// a single page or component.
+
+body {
+  --d-nav-underline-height: 0;
+  --d-header-icon-background--hover: #{$water};
+}
+
+// alerts
+
+.alert.alert-info {
+  background: $sand;
+  border-radius: 15px;
+}
+
+.alert .close {
+  top: 6px;
+  right: 10px;
+}
+
+.signup-cta.alert.alert-info a {
+  margin-top: 0.65em;
+}
+
+// badges and glyphs
+
+.badge-notification.new-posts,
+.badge-notification.unread-posts {
+  background: $sky;
+}
+
+.private-message-glyph {
+  color: var(--secondary);
+}
+
+a.mention.--current,
+a.mention-group.--current {
+  background: #{$gold};
+}
+
+// loading and empty states
+
+.spinner {
+  border: 4px solid $sky;
+  border-right-color: transparent;
+}
+
+.empty-state {
+  padding-top: 1.2em;
+  background: var(--secondary);
+}

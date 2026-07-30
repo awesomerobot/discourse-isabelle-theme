@@ -1,17 +1,5 @@
-.category-list tbody .category {
-  border-left: none;
-}
-
-.category-boxes,
-.category-boxes-with-topics {
-  box-sizing: border-box;
-  margin-top: 0;
-  padding: 1em;
-}
-
-.category-heading {
-  color: $secondary;
-}
+// The categories page: category lists, boxes, and the latest/top columns
+// alongside them.
 
 .categories-and-top,
 .categories-and-latest {
@@ -26,6 +14,15 @@
     }
   }
 }
+
+.category-heading {
+  color: $secondary;
+}
+
+// category lists
+//
+// the three rules below are specificity-ordered on purpose: the rounded top is
+// only kept when the list is the first thing in a column.
 
 .category-list {
   border-radius: 10px 10px 0 0;
@@ -47,6 +44,12 @@
   }
 }
 
+.category-list tbody .category {
+  border-left: none;
+}
+
+// latest / top topic columns
+
 .latest-topic-list .table-heading,
 .top-topic-list .table-heading {
   background: $sand;
@@ -60,6 +63,15 @@
   border-color: $wet_sand;
 }
 
+// category boxes
+
+.category-boxes,
+.category-boxes-with-topics {
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: 1em;
+}
+
 .category-boxes .category-box-inner,
 .category-boxes-with-topics .category-box-inner {
   border-color: $wet_sand;
@@ -70,4 +82,11 @@
 .category-boxes-with-topics .category-box {
   border-radius: 24px;
   background: $sand;
+}
+
+// edit category
+
+div.edit-category .edit-category-title {
+  background: $wet_sand;
+  @include border-radius-small;
 }

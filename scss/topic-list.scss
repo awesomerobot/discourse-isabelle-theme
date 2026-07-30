@@ -1,3 +1,5 @@
+// Topic lists and the bordered panel they sit in.
+
 tbody {
   border: none;
 }
@@ -18,6 +20,42 @@ tr {
   background: $secondary;
 }
 
+.top-lists {
+  background: $sand;
+}
+
+// lists rendered outside #list-area (search results, user activity)
+
+.paginated-topics-list {
+  .topic-list {
+    @include border-radius-small;
+    overflow: hidden;
+  }
+  tbody {
+    border: 1px solid $wet_sand;
+  }
+  .topic-list-item td:first-child {
+    border-left: 1px solid $wet_sand;
+  }
+}
+
+// footer and dismiss controls
+
 .footer-message {
   padding: 0 0.75em;
+}
+
+.topic-list-bottom {
+  #dismiss-new {
+    margin: -0.5em 1em 1em 1em;
+  }
+}
+
+// the second rule wins; the padding above it is dead but left in place
+.dismiss-container-top {
+  padding: 1em;
+}
+
+.dismiss-container-top {
+  padding: 0;
 }

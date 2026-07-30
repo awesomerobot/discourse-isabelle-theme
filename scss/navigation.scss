@@ -1,0 +1,84 @@
+// Nav pills and the rounded control bar that sits above topic lists, admin
+// pages and user pages.
+
+.admin-main-nav,
+.admin-controls,
+.user-primary-navigation,
+.list-controls {
+  background: $sky;
+  border-radius: 20px 20px 0 0;
+  padding: 1em 1em 0.5em 1em;
+
+  .select-kit.combo-box .combo-box-header > .d-icon {
+    color: $secondary;
+  }
+  margin-bottom: 0;
+}
+
+.desktop-view {
+  .list-controls {
+    min-height: 50px; // minimizes jump on loading
+  }
+}
+
+.navigation-container {
+  .btn {
+    font-size: 1.05em;
+  }
+  .btn-icon {
+    font-size: 1.1em;
+  }
+  .select-kit.combo-box .select-kit-header {
+    border-color: $water;
+    @include border-radius-large;
+  }
+  .select-kit .select-kit-header {
+    .d-icon,
+    .selected-name,
+    .badge-category__name {
+      color: $secondary;
+    }
+  }
+}
+
+// the tooltip wrapper takes the button's place while it is disabled
+#create-topic[disabled] + .fk-d-tooltip__trigger {
+  background: transparent;
+  font-size: var(--font-up-3);
+  order: -1;
+  margin-top: 0.15em;
+}
+
+// nav pills
+
+:root {
+  --d-nav-color: var(--primary);
+  --d-nav-color--hover: #{$sand};
+  --d-nav-bg-color--hover: #{$water};
+  --d-nav-color--active: #{$gold};
+  --d-nav-bg-color--active: var(--quaternary);
+  --d-nav-border-color--active: #{$gold};
+  --d-nav-underline-height: 0;
+}
+
+.user-navigation .nav-pills > li a,
+.nav-pills > li a {
+  @include border-radius-large;
+}
+
+.new-user-wrapper .user-navigation {
+  padding-block: 0.5em;
+  border-color: #{$sand};
+}
+
+.user-navigation-primary {
+  border-top: 1px solid #{$sand};
+}
+
+// on the sky-colored control bar the pills need light text
+#navigation-bar.nav-pills > li > a {
+  color: #{$sand};
+  &.active {
+    color: #{$gold};
+  }
+}

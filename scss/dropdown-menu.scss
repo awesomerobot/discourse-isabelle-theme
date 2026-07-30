@@ -1,0 +1,40 @@
+// float-kit dropdown menus, plus the post and topic admin menus. The older
+// widget-based menus are in popup-menu.scss.
+
+nav.post-controls .post-admin-menu,
+.topic-admin-popup-menu {
+  border: none;
+  box-shadow: none;
+  @include border-radius-small;
+}
+// the second selector also covers the widget menus in popup-menu.scss
+nav.post-controls .post-admin-menu h3,
+.popup-menu h3 {
+  text-align: center;
+  color: $secondary;
+}
+
+.dropdown-menu__item {
+  .discourse-no-touch & {
+    button {
+      &:hover {
+        color: var(--primary);
+        background: #{$wet_sand};
+        .d-icon {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .btn-danger {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    .discourse-no-touch & {
+      &:hover {
+        top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// Admin pages and the review queue.
+
+.admin-main-nav {
+  box-sizing: border-box;
+}
+
+// undoes the bottom padding navigation.scss gives the shared control bar
+.admin-controls {
+  padding: 1em 0;
+}
+
+.admin-controls .controls {
+  background: transparent;
+}
+
+.admin-content {
+  padding: 1em;
+  border: 1px solid $primary-low;
+}
+
+.admin-customize .themes-list-header {
+  border: none;
+  border-bottom: 1px solid $primary-low;
+  padding-bottom: 1em;
+}
+.admin-customize .themes-list-header .tab,
+.admin-customize .themes-list-header .tab {
+  @include border-radius-large;
+}
+
+// review queue
+
+.reviewable .reviewable-container .reviewable-list + .reviewable-filters {
+  background: $sand;
+  div.ac-wrap,
+  .d-date-time-input-range .d-date-input {
+    @include border-radius-small;
+  }
+  .d-date-time-input {
+    border: none;
+  }
+  .d-date-time-input-range .panels .btn {
+    background: $mud;
+    @include border-radius-small;
+  }
+  .d-date-time-input-range .panels.to .to-panel,
+  .d-date-time-input-range .panels.from .from-panel {
+    background: $love;
+  }
+}

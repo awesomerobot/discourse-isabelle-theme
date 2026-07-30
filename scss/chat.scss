@@ -1,7 +1,11 @@
+// Chat plugin: full-page chat and the drawer.
+
 .chat-skeleton {
   --primary-100: #{$wet_sand};
   --primary-200: #{$sand};
 }
+
+// full page chat
 
 body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
   gap: 0 2em;
@@ -19,6 +23,8 @@ body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
 #main-chat-outlet {
   margin-top: 1.75em;
 }
+
+// the channel is a bordered panel hanging below the navbar
 
 .chat-channel {
   box-sizing: border-box;
@@ -40,6 +46,18 @@ body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
   border-bottom: none;
 }
 
+.has-full-page-chat {
+  .chat-channel {
+    border-radius: 0 0 25px 25px;
+    border-inline: 1px solid $mud;
+  }
+  .c-navbar-container {
+    border-top: 1px solid $mud;
+  }
+}
+
+// drawer
+
 .chat-drawer .chat-drawer-container {
   border: 2px solid $mud;
   border-bottom: none;
@@ -51,28 +69,20 @@ body.has-sidebar-page.has-full-page-chat #main-outlet-wrapper {
   }
 }
 
-.has-full-page-chat {
-  .chat-channel {
-    border-radius: 0 0 25px 25px;
-    border-inline: 1px solid $mud;
-  }
-  .c-navbar-container {
-    border-top: 1px solid $mud;
-  }
-}
-
-.chat-message-actions .more-buttons.dropdown-select-box .select-kit-body {
-  border-color: $mud;
-}
-
 .chat-drawer-content {
   background: var(--secondary);
 }
+
+// lists, messages and footer
 
 .c-user-thread,
 .chat-drawer-container
   .channels-list-container
   .chat-channel-row:not(:last-of-type) {
+  border-color: $mud;
+}
+
+.chat-message-actions .more-buttons.dropdown-select-box .select-kit-body {
   border-color: $mud;
 }
 

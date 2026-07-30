@@ -1,3 +1,6 @@
+// The sidebar, styled as a floating rounded panel rather than a full-height
+// column.
+
 .sidebar-wrapper {
   --d-sidebar-link-icon-color: #{$mud};
   --d-sidebar-link-badge-color: #{$sky};
@@ -21,26 +24,6 @@
   --d-sidebar-active-suffix-color: #{$sky};
 }
 
-.sidebar-section-wrapper {
-  border-color: #{$wet_sand};
-}
-
-.header-sidebar-toggle button {
-  border-radius: 100px;
-  padding: 0.5em;
-
-  .d-icon {
-    color: var(--secondary);
-  }
-
-  &:focus,
-  &:hover {
-    .d-icon {
-      color: var(--primary-medium) !important;
-    }
-  }
-}
-
 .sidebar-wrapper {
   margin: 1.5em 0 1.5em 10px;
   background: transparent;
@@ -61,6 +44,14 @@
   }
 }
 
+.sidebar-section-wrapper {
+  border-color: #{$wet_sand};
+}
+
+.sidebar-section-link-wrapper .sidebar-section-link {
+  border-radius: 10px;
+}
+
 .sidebar-footer-wrapper .sidebar-footer-container::before {
   background: linear-gradient(
     to bottom,
@@ -69,6 +60,20 @@
   );
 }
 
-.sidebar-section-link-wrapper .sidebar-section-link {
-  border-radius: 10px;
+// the toggle lives in the header, so its icon takes header colors
+
+.header-sidebar-toggle button {
+  border-radius: 100px;
+  padding: 0.5em;
+
+  .d-icon {
+    color: var(--secondary);
+  }
+
+  &:focus,
+  &:hover {
+    .d-icon {
+      color: var(--primary-medium) !important;
+    }
+  }
 }

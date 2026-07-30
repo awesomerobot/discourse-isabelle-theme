@@ -1,0 +1,24 @@
+// Tag pages and tag lists.
+
+#show-tag-info {
+  font-size: 1.05em;
+}
+
+.tag-sort-options {
+  margin-top: 1em;
+}
+
+.tags-list {
+  border-color: $wet_sand;
+}
+
+.tags-page,
+.tag-page {
+  hr {
+    border-color: $wet_sand;
+  }
+}
+
+.discourse-tags__tag-separator {
+  color: currentcolor;
+}

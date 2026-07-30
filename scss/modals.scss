@@ -1,0 +1,36 @@
+// Modals share the sky-colored, rounded header used by topic titles and list
+// controls.
+
+.bootbox.modal,
+.modal-inner-container {
+  @include border-radius-large;
+}
+
+.modal-header {
+  background: $sky;
+  color: $secondary;
+  border-radius: 20px 20px 0 0;
+  .btn-flat.close {
+    margin-top: 5px;
+    .d-icon {
+      color: $secondary;
+    }
+  }
+}
+.modal .nav li > a {
+  background: $sky;
+  &.active {
+    background: $water;
+  }
+}
+
+.modal-footer {
+  border: none;
+}
+
+// login and signup
+
+.login-modal .login-modal #login-buttons:not(.hidden) button:last-of-type,
+.create-account .login-modal #login-buttons:not(.hidden) button:last-of-type {
+  @include border-radius-small;
+}

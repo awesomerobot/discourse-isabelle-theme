@@ -1,20 +1,21 @@
-@mixin border-radius-small {
-  border-radius: 10px;
-}
+// Theme palette. No CSS output on its own.
+//
+// These are the raw values the theme paints with; the color scheme in
+// about.json is what feeds Discourse's own `--primary`, `--secondary`, etc.
 
-@mixin border-radius-large {
-  border-radius: 20px;
-}
-
+// paper / neutrals
 $mud: #ccc1a7;
 $sand: #f1e9d5;
 $wet_sand: #eae5cd;
 
+// teals — header, links, accents
 $sky: #68c6b9;
 $water: #00a791;
 
+// deep teals — button fills and their drop shadows
 $night: #015562;
 $dark_night: #00333d;
 
+// yellows — highlight and hover states
 $gold: #fcca46;
 $light_gold: #fdde89;

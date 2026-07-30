@@ -1,0 +1,143 @@
+// User cards, the user profile pages, and the user directory.
+
+// cards
+
+.user-card.show,
+.group-card.show {
+  @include border-radius-large;
+}
+
+.user-card,
+.group-card {
+  &.show {
+    box-shadow: 0 4px 0 0 $mud;
+    border: 1px solid $mud;
+  }
+}
+
+.user-card .card-content,
+.group-card .card-content {
+  background: transparent;
+}
+
+.user-card .badge-section .user-badge,
+.user-card .badge-section .more-user-badges a {
+  border: none;
+  background: $sand;
+  @include border-radius-small;
+}
+
+// activity stream
+
+.user-stream .item,
+.user-stream .user-stream-item {
+  border-color: $wet_sand;
+}
+
+.user-stream .notification.unread {
+  background: $sand;
+}
+
+// directory
+
+.directory .user {
+  border-color: $mud;
+}
+
+.directory .me {
+  background: $light_gold;
+}
+
+.directory table {
+  @include border-radius-large;
+  overflow: hidden;
+  border-top: none;
+  box-shadow: 0 5px 0 0 $mud;
+  border: none;
+  background: $sand;
+
+  tbody {
+    border-top: none;
+  }
+  thead {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    border: none;
+  }
+
+  th:first-of-type {
+    padding-left: 1.5em;
+  }
+
+  td,
+  th,
+  tr {
+    border: none;
+  }
+}
+
+// profile layout — the card-like panel that holds profile content
+
+.user-content-wrapper {
+  border: 2px solid $mud;
+  border-top: none;
+
+  @include border-radius-large;
+  box-shadow: 0 5px 0 0 $mud;
+  border-top: none;
+  background: $secondary;
+}
+
+.user-content-wrapper .user-additional-controls,
+.user-content {
+  padding: 1em;
+}
+
+.user-content-wrapper .user-secondary-navigation {
+  padding-left: 1em;
+}
+
+.user-content-wrapper .user-additional-controls + .user-content,
+.user-content-wrapper .user-secondary-navigation + .user-content {
+  padding-right: 1em;
+}
+.user-content.user-badges-list {
+  margin-bottom: 0;
+}
+
+.user-content-wrapper .user-primary-navigation .horizontal-overflow-nav {
+  border: none;
+}
+
+.messages-nav {
+  margin-top: 1em;
+}
+
+// the "about me" panel, which continues the border of the counters above it
+
+.user-main .staff-counters {
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+.user-main .about .details {
+  padding: 1em 1em 0.5em;
+  margin-bottom: 2em;
+
+  border: 2px solid $mud;
+  border-top: none;
+  box-shadow: 0 5px 0 0 $mud;
+  @include border-radius-small;
+  .staff & {
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.user-main .about.collapsed-info .details {
+  border: none;
+  box-shadow: none;
+}
+
+.about .controls .btn {
+  margin-top: 0.5em !important;
+}

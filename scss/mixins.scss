@@ -1,0 +1,9 @@
+// Shared mixins. No CSS output on its own.
+
+@mixin border-radius-small {
+  border-radius: 10px;
+}
+
+@mixin border-radius-large {
+  border-radius: 20px;
+}

@@ -1,0 +1,47 @@
+// Group pages and the group/badge box grids.
+
+.group-box-inner,
+.badge-card {
+  border: none;
+  background: $sand;
+  border-radius: 2%/4%;
+
+  &.medium {
+    margin-right: 0.65% !important;
+    margin-left: 0.65% !important;
+    &:hover {
+      box-shadow: 0 4px 0 0 $wet_sand;
+    }
+  }
+}
+
+.group-box-inner,
+.groups-boxes .group-box {
+  border: none;
+  @include border-radius-small;
+}
+
+.discourse-no-touch .groups-boxes .group-box:hover {
+  box-shadow: 0 4px 0 0 $wet_sand;
+}
+
+.group-details-container {
+  background: none;
+}
+
+.groups-header-filters-type {
+  .select-kit-selected-name {
+    padding: 0.55em 0.2em;
+  }
+}
+
+.group-members {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.group .user-secondary-navigation {
+  border: none;
+  margin-top: 1em;
+}

@@ -1,0 +1,100 @@
+// The theme's signature button treatment: pill shape with a solid drop shadow
+// that collapses as the button is pushed down on :active.
+
+// buttons that get the dark "default" treatment
+.admin-controls button,
+.admin-controls label.btn,
+.timeline-container.timeline-fullscreen
+  .topic-timeline
+  .timeline-footer-controls
+  button,
+.group-members-manage .btn,
+.btn-default,
+#show-tag-info,
+.user-main .about .controls li > .select-kit-header,
+.user-main .about .controls .btn,
+.user-badges .btn,
+.signup-cta.alert.alert-info .btn:not(.btn-primary),
+.widget-button.btn.popup-menu-button.toggle-admin-menu.keyboard-target-admin-menu.no-text.btn-icon,
+.widget-button.btn.popup-menu-button.toggle-admin-menu.no-text.btn-icon,
+.new-channel-btn,
+.topic-notifications-options .dropdown-select-box-header {
+  @include btn(
+    $text-color: $secondary,
+    $bg-color: $night,
+    $icon-color: $secondary,
+    $hover-bg-color: darken($night, 5%),
+    $hover-icon-color: $secondary
+  );
+  transition: top 0.25s;
+
+  &:active {
+    box-shadow: none !important;
+    position: relative;
+    top: 3px;
+  }
+  padding: 0.75em 1em;
+  border-radius: 25px;
+  box-shadow: 0 4px 0 0 $dark_night;
+}
+
+// the fullscreen timeline packs its footer buttons tighter
+.timeline-container.timeline-fullscreen
+  .topic-timeline
+  .timeline-footer-controls
+  button {
+  margin-right: 0.25em;
+}
+
+.btn-primary {
+  @include btn(
+    $text-color: $secondary,
+    $bg-color: $love,
+    $icon-color: $secondary,
+    $hover-bg-color: darken($love, 15%),
+    $hover-icon-color: $secondary
+  );
+  transition: top 0.25s;
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px;
+  }
+  padding: 0.75em 1em;
+  border-radius: 25px;
+  box-shadow: 0 4px 0 0 darken($love, 25%);
+}
+
+.discourse-no-touch .btn-primary:hover,
+.discourse-no-touch .btn-primary.btn-hover,
+.no-ember .btn-primary:hover,
+.no-ember .btn-primary.btn-hover {
+  color: var(--d-button-primary-text-color--hover);
+}
+
+.btn-danger {
+  padding: 0.75em 1em;
+  border-radius: 25px;
+  box-shadow: 0 4px 0 0 darken($love, 25%);
+  transition: top 0.25s;
+
+  .discourse-no-touch & {
+    &:hover {
+      box-shadow: none;
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
+// flat buttons that sit inside an input
+.create-invite-modal .invite-input-with-button .btn,
+.share-topic-modal .invite-input-with-button .btn {
+  @include border-radius-small;
+  background: $wet_sand;
+  &:hover {
+    .d-icon {
+      color: var(--primary-high);
+    }
+  }
+}

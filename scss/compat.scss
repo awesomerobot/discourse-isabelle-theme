@@ -1,0 +1,23 @@
+// Interop with other themes/components installed alongside this one. Wrapped in
+// :where() so they add no specificity of their own — safe to delete wholesale
+// if the component goes away.
+
+:where(.uc-modernize-foundation-theme)
+  .list-controls
+  .combo-box
+  .combo-box-header:hover {
+  background: $night;
+}
+
+:where(.uc-modernize-foundation-theme)
+  .select-kit.single-select.is-expanded
+  .select-kit-header:not(.btn),
+:where(.uc-modernize-foundation-theme)
+  .select-kit.single-select
+  .select-kit-header:not(.btn):focus,
+:where(.uc-modernize-foundation-theme)
+  .select-kit.single-select
+  .select-kit-header:not(.btn):active {
+  background: $night;
+  border-color: $night;
+}

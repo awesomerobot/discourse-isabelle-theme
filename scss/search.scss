@@ -1,0 +1,64 @@
+// Search: the header search menu, the full-page search form, and results.
+
+.search-container .search-header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  @include border-radius-large;
+}
+
+#search-type-header {
+  height: 100%;
+}
+
+.search-advanced-title {
+  margin: 0;
+}
+
+.search-container .search-advanced .search-info {
+  border-color: #eae5ca;
+}
+
+.search-container .search-advanced-sidebar .search-advanced-title {
+  background: $sky;
+  border-radius: 10px 10px 0 0;
+}
+
+.search-container .search-advanced-sidebar .search-advanced-filters {
+  background: $sand;
+}
+
+.search-container {
+  .select-kit.multi-select {
+    @include border-radius-small;
+  }
+  div.ac-wrap {
+    @include border-radius-small;
+  }
+
+  #search-post-date {
+    margin-top: 0.25em;
+  }
+}
+
+// results
+
+.fps-result a.search-link .topic-title {
+  color: $primary-high !important;
+}
+
+// header search menu
+
+.search-menu .menu-panel:not(.slide-in) .panel-body {
+  height: auto !important;
+}
+
+.search-menu .search-context .show-help {
+  margin-right: 0.5em;
+}
+
+.search-menu {
+  .menu-panel li a.widget-link,
+  .menu-panel li.heading a.widget-link {
+    padding: 0.5em;
+  }
+}
